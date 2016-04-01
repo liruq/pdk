@@ -18,9 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.*;
-/**
- * Created by liangyh on 2015/8/15.
- */
+
 @Controller
 @RequestMapping("/bd")
 public class GoodsTypeAction {

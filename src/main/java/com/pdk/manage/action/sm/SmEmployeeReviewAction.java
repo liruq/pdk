@@ -3,9 +3,7 @@ package com.pdk.manage.action.sm;
 import com.github.pagehelper.PageInfo;
 import com.pdk.manage.common.wapper.sm.SmEmployeeReviewDataTableQueryArgWapper;
 import com.pdk.manage.dto.sm.EmployeeReviewJson;
-import com.pdk.manage.exception.BusinessException;
 import com.pdk.manage.model.sm.EmployeeReview;
-import com.pdk.manage.model.sm.User;
 import com.pdk.manage.service.sm.SmEmployeeReviewService;
 import com.pdk.manage.service.sm.SmUserService;
 import org.apache.commons.lang3.StringUtils;
@@ -13,15 +11,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.Errors;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
- * Created by liuhm on 2015/9/18
+ *
  */
 @Controller
 @RequestMapping("/sm")

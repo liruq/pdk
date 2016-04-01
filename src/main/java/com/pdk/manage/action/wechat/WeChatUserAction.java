@@ -18,7 +18,7 @@ import java.util.*;
 
 /**
  * 用户相关对外接口
- * Created by liuhaiming on 2015/8/30.
+ *
  */
 @Controller
 @RequestMapping("/wechat")

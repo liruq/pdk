@@ -32,8 +32,6 @@ import java.lang.reflect.Method;
 import java.util.*;
 
 /**
- * Created by 程祥 on 15/9/8.
- * Function：订单跟踪，依据业务类型进行查询~
  * 所有服务以/order/flowtype*   开头
  */
 @Controller

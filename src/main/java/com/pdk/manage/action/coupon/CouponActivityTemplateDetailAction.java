@@ -3,7 +3,6 @@ package com.pdk.manage.action.coupon;
 import com.pdk.manage.dto.coupon.CouponActivityTemplateJson;
 import com.pdk.manage.exception.BusinessException;
 import com.pdk.manage.model.coupon.CouponActivityTemplate;
-import com.pdk.manage.model.coupon.CouponActivityTemplateB;
 import com.pdk.manage.service.coupon.CouponActivityTemplateService;
 import com.pdk.manage.util.DBConst;
 import org.apache.commons.lang3.StringUtils;
@@ -19,9 +18,7 @@ import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by liuhaiming on 2015/9/11.
- */
+
 @Controller
 @RequestMapping("coupon")
 public class CouponActivityTemplateDetailAction {

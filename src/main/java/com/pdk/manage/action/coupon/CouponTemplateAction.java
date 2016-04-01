@@ -1,9 +1,7 @@
 package com.pdk.manage.action.coupon;
 
-import com.pdk.manage.model.coupon.Coupon;
 import com.pdk.manage.model.coupon.CouponActivityTemplateB;
 import com.pdk.manage.service.coupon.CouponActivityTemplateBService;
-import com.pdk.manage.service.coupon.CouponService;
 import com.pdk.manage.service.flow.FlowTypeService;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -17,9 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by liuhaiming on 2015/9/11.
- */
+
 @Controller
 @RequestMapping("coupon")
 public class CouponTemplateAction {

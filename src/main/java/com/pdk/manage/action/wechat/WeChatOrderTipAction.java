@@ -1,9 +1,5 @@
 package com.pdk.manage.action.wechat;
 
-import com.pdk.manage.exception.BusinessException;
-import com.pdk.manage.model.order.OrderRequestModel;
-import com.pdk.manage.model.order.ShowOrderPageModel;
-import com.pdk.manage.service.order.OrderService;
 import com.pdk.manage.service.order.OrderTipService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by hubo on 2015/10/8
+ *
  */
 @Controller
 @RequestMapping("/wechat/order_tip")

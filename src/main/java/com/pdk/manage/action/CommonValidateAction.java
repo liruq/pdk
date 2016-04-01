@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * Created by hubo on 2015/8/19
+ *
  */
 @Controller
 public class CommonValidateAction {

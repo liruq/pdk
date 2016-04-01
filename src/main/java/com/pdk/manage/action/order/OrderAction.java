@@ -38,10 +38,7 @@ import javax.servlet.http.HttpSession;
 import java.math.BigDecimal;
 import java.util.*;
 
-/**
- * Created by 程祥 on 15/8/19.
- * Function：订单相关处理
- */
+
 @Controller
 @RequestMapping(value = "/order")
 public class OrderAction {

@@ -1,9 +1,7 @@
 package com.pdk.manage.action.coupon;
 
 import com.github.pagehelper.PageInfo;
-import com.pdk.manage.common.wapper.coupon.CouponActivityDataTableQueryArgWapper;
 import com.pdk.manage.common.wapper.coupon.CouponActivityTemplateDataTableQueryArgWapper;
-import com.pdk.manage.dto.coupon.CouponActivityJson;
 import com.pdk.manage.dto.coupon.CouponActivityTemplateJson;
 import com.pdk.manage.exception.BusinessException;
 import com.pdk.manage.model.coupon.CouponActivityTemplate;
@@ -18,9 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
-/**
- * Created by liuhaiming on 2015/9/11.
- */
+
 @Controller
 @RequestMapping("coupon")
 public class CouponActivityTemplateAction {

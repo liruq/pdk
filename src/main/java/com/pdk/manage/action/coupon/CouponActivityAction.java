@@ -7,7 +7,6 @@ import com.pdk.manage.dto.coupon.CouponActivityJson;
 import com.pdk.manage.exception.BusinessException;
 import com.pdk.manage.model.coupon.CouponActivity;
 import com.pdk.manage.service.coupon.CouponActivityService;
-import com.pdk.manage.util.DBConst;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,9 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
-/**
- * Created by liuhaiming on 2015/9/11.
- */
+
 @Controller
 @RequestMapping("coupon")
 public class CouponActivityAction {

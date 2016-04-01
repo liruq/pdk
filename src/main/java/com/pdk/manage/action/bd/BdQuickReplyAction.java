@@ -6,7 +6,6 @@ import com.pdk.manage.common.wapper.bd.BdQuickReplyDataTableQueryArgWapper;
 import com.pdk.manage.dto.bd.QuickReplyJson;
 import com.pdk.manage.exception.BusinessException;
 import com.pdk.manage.model.bd.QuickReply;
-import com.pdk.manage.model.flow.FlowUnit;
 import com.pdk.manage.service.bd.QuickReplyService;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -16,7 +15,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
-import tk.mybatis.mapper.mapperhelper.EntityHelper;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
@@ -24,9 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by liuhaiming on 2015/9/2.
- */
+
 @Controller
 @RequestMapping("/bd")
 public class BdQuickReplyAction {

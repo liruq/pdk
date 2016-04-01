@@ -27,7 +27,7 @@ import java.math.BigDecimal;
 import java.util.*;
 
 /**
- * Created by hubo on 2015/10/8
+ *
  */
 @Controller
 @RequestMapping("/wechat/order")

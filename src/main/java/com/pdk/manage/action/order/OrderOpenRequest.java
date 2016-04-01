@@ -20,7 +20,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by 程祥 on 15/9/24.
  * Function： 订单开放服务~  给微信端提供的查询接口~
  */
 @Controller

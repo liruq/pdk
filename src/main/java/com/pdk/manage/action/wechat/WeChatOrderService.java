@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 
 /**
- * Created by hubo on 2015/10/13
+ *
  */
 @Service
 public class WeChatOrderService {

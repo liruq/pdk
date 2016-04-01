@@ -13,9 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by liuhaiming on 2015/8/17.
- */
+
 @Controller
 @RequestMapping("/bd")
 public class PositionAction {

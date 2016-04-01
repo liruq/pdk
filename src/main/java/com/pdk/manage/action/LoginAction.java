@@ -2,8 +2,8 @@ package com.pdk.manage.action;
 
 import com.pdk.manage.dto.sm.FuncDto;
 import com.pdk.manage.model.sm.Employee;
-import com.pdk.manage.service.sm.EmployeeService;
 import com.pdk.manage.service.FuncService;
+import com.pdk.manage.service.sm.EmployeeService;
 import com.pdk.manage.util.CommonConst;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.slf4j.Logger;
@@ -15,13 +15,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
- * Created by hubo on 2015/7/18
+ *
  */
 @Controller
 public class LoginAction {

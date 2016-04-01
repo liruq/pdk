@@ -27,9 +27,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by liuhaiming on 2015/9/11.
- */
+
 @Controller
 @RequestMapping("coupon")
 public class CouponActivityDetailAction {

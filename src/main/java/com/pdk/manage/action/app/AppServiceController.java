@@ -30,10 +30,7 @@ import javax.servlet.http.HttpSession;
 import java.math.BigDecimal;
 import java.util.*;
 
-/**
- * Created by 程祥 on 15/9/25.
- * Function： app服务
- */
+
 @Controller
 @RequestMapping(value = "/app",produces = "text/html; charset=utf-8")
 public class AppServiceController {

@@ -5,7 +5,6 @@ import com.pdk.manage.common.wapper.order.OrderGoodsDataTableArgWapper;
 import com.pdk.manage.dto.order.OrderGoodsJson;
 import com.pdk.manage.model.bd.Unit;
 import com.pdk.manage.model.flow.FlowTemplateInstanceUnit;
-import com.pdk.manage.model.flow.FlowUnit;
 import com.pdk.manage.model.order.OrderDetail;
 import com.pdk.manage.model.order.OrderTable;
 import com.pdk.manage.model.sm.Employee;
@@ -21,7 +20,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -31,10 +29,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by 程祥 on 15/8/17.
- * Function：订单相关请求
- */
+
 @Controller
 @RequestMapping(value = "/order")
 public class OrderDetailAction {

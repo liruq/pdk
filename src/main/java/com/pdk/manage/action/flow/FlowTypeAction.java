@@ -23,9 +23,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.*;
 
-/**
- * Created by hubo on 2015/8/12
- */
+
 @Controller
 @RequestMapping("/flow")
 public class FlowTypeAction {

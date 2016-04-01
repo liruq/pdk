@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by liuhaiming on 2015/9/3.
+ *
  */
 @Controller
 @RequestMapping("/img")

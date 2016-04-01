@@ -15,9 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by hubo on 2015/8/19
- */
+
 @Controller
 @RequestMapping("/cs")
 public class CustomerServiceAction {

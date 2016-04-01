@@ -14,7 +14,7 @@ import java.awt.image.BufferedImage;
 import java.util.Random;
 
 /**
- * Created by hubo on 2015/8/11
+ *
  */
 @Controller
 public class ValidateCodeImageAction {

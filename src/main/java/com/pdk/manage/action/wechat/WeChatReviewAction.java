@@ -4,8 +4,6 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.pdk.manage.dto.coupon.CouponJson;
 import com.pdk.manage.exception.BusinessException;
-import com.pdk.manage.model.coupon.Coupon;
-import com.pdk.manage.model.coupon.CouponUserRelation;
 import com.pdk.manage.model.order.OrderRequestModel;
 import com.pdk.manage.model.order.ShowOrderAggVO;
 import com.pdk.manage.model.order.ShowOrderPageModel;
@@ -32,7 +30,7 @@ import java.util.Map;
 
 /**
  * 优惠券相关对外接口
- * Created by liuhaiming on 2015/8/30.
+ *
  */
 @Controller
 @RequestMapping("/wechat/review")
