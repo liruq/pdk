@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="lanyuan-notebook-3.1v:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="lanyuan-notebook-3.1v.war">
+      <element id="artifact" artifact-name="lanyuan-notebook-3.1v:war exploded" />
+    </root>
+  </artifact>
+</component>
