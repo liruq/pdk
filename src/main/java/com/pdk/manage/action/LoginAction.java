@@ -40,7 +40,6 @@ public class LoginAction {
         String path = request.getContextPath();
         String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
         String resourcePath = request.getServletContext().getInitParameter("resource_path") + "/";
-
         logger.info("username : {}  password :{}", username, password);
         System.out.println(username);
 

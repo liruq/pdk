@@ -4,6 +4,7 @@ import com.pdk.manage.dao.common.BaseDao;
 import com.pdk.manage.dao.common.BusinessLogicMapper;
 import com.pdk.manage.model.bd.Goods;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -17,4 +18,7 @@ public interface GoodsDao extends BaseDao<Goods>, BusinessLogicMapper<Goods> {
     List<Goods> mySelect();
 
     List<Goods> mySelectLike(@Param("searchText") String searchText);
+
+    @Select("select * from pdk_bd_goods  limit #{offset},#{limit}")
+    List<Goods> querybyPage(@Param("offset")int offset,@Param("limit")int limit);
 }

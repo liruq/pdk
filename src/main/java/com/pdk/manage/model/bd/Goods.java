@@ -43,6 +43,10 @@ public class Goods  implements IBaseVO {
 
     private Short dr;
 
+    private double price;
+    private String user;
+    private String img;
+
     public String getId() {
         return id;
     }
@@ -113,5 +117,29 @@ public class Goods  implements IBaseVO {
 
     public void setGoodsType(GoodsType goodsType) {
         this.goodsType = goodsType;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }

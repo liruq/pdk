@@ -24,6 +24,8 @@
     t.memo,
     t.ts,
     t.dr,
+    t.price,
+    t.user,
     r.name as goodstype_name
     from pdk_bd_goods t
     left join pdk_bd_goodstype r on t.goodstype_id = r.id
@@ -47,6 +49,9 @@
       t.memo,
       t.ts,
       t.dr,
+      t.price,
+      t.user,
+      t.img,
       r.name as goodstype_name
     from pdk_bd_goods t
     left join pdk_bd_goodstype r on t.goodstype_id = r.id
@@ -64,6 +69,9 @@
         t.memo,
         t.ts,
         t.dr,
+            t.price,
+    t.user,
+    t.img,
         r.name as goodstype_name
       from pdk_bd_goods t
       left join pdk_bd_goodstype r on t.goodstype_id = r.id
@@ -81,6 +89,8 @@
         t.memo,
         t.ts,
         t.dr,
+            t.price,
+    t.user,t.img,
         r.name as goodstype_name
       from pdk_bd_goods t
       left join pdk_bd_goodstype r on t.goodstype_id = r.id
@@ -98,6 +108,8 @@
         t.memo,
         t.ts,
         t.dr,
+            t.price,
+    t.user,t.img,
         r.name as goodstype_name
       from pdk_bd_goods t
       left join pdk_bd_goodstype r on t.goodstype_id = r.id
@@ -115,6 +127,8 @@
         t.memo,
         t.ts,
         t.dr,
+            t.price,
+    t.user,t.img,
         r.name as goodstype_name
       from pdk_bd_goods t
       left join pdk_bd_goodstype r on t.goodstype_id = r.id
@@ -133,6 +147,8 @@
     t.memo,
     t.ts,
     t.dr,
+        t.price,
+    t.user,t.img,
     r.name as goodstype_name
     from pdk_bd_goods t
     left join pdk_bd_goodstype r on t.goodstype_id = r.id

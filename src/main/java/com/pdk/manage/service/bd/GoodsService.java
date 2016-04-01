@@ -4,12 +4,12 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.pdk.manage.dao.bd.GoodsDao;
 import com.pdk.manage.model.bd.Goods;
-import com.pdk.manage.model.sm.Employee;
 import com.pdk.manage.service.BaseService;
-import com.pdk.manage.util.DBConst;
 import com.pdk.manage.util.IdGenerator;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Created by liangyh on 2015/8/15.
@@ -67,5 +67,9 @@ public class GoodsService  extends BaseService<Goods> {
     public boolean isCodeRepeat(Goods goods) {
         int count = getDao().repeatCountSelect(goods);
         return count > 0;
+    }
+
+    public List<Goods> querybyPage(int page){
+        return getDao().querybyPage(page*10-10,page*10);
     }
 }

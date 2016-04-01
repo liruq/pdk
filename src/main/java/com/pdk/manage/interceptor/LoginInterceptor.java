@@ -13,18 +13,23 @@ import javax.servlet.http.HttpSession;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.regex.Pattern;
 
 /**
  * Created by hubo on 2015/8/8
  */
 public class LoginInterceptor  implements HandlerInterceptor{
 
+    private static final Pattern LoginCheckWhiteList = Pattern.compile("^(/index.html|/bd/goods|detail)");
     private static Logger log = LoggerFactory.getLogger(LoginInterceptor.class);
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-
+        String uri = request.getRequestURI();
         Boolean isLogin =  (Boolean)request.getSession().getAttribute("isLogin");
+        if (LoginCheckWhiteList.matcher(uri).find()) {
+            return true;
+        }
 
         if(isLogin == null || !isLogin){
             log.info("没有登录,直接跳转登录页面");

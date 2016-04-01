@@ -217,5 +217,11 @@ public class GoodsAction {
 
     }
 
+    @RequestMapping("/goods")
+    @ResponseBody
+    public List<Goods> getGoodsList(int page){
+        return service.querybyPage(page);
+    }
+
 
 }
