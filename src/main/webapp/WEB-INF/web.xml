@@ -12,7 +12,7 @@
     
     <context-param>
         <param-name>resource_path</param-name>
-        <param-value>http://localhost:8081</param-value>
+        <param-value>http://localhost:8080</param-value>
         <!--<param-value>http://paodekuai.lifecreatech.com:8888</param-value>-->
     </context-param>
 

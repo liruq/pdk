@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * 树节点
- * Created by hubo on 2015/8/10
+ *
  */
 public class TreeNode<E> {
 

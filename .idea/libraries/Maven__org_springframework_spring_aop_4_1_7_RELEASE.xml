@@ -2,6 +2,7 @@
   <library name="Maven: org.springframework:spring-aop:4.1.7.RELEASE">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.1.7.RELEASE/spring-aop-4.1.7.RELEASE.jar!/" />
+      <root url="file://$PROJECT_DIR$/script/igetui" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.1.7.RELEASE/spring-aop-4.1.7.RELEASE-javadoc.jar!/" />
@@ -9,5 +10,6 @@
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.1.7.RELEASE/spring-aop-4.1.7.RELEASE-sources.jar!/" />
     </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/script/igetui" recursive="false" />
   </library>
 </component>

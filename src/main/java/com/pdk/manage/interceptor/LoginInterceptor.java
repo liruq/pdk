@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
  */
 public class LoginInterceptor  implements HandlerInterceptor{
 
-    private static final Pattern LoginCheckWhiteList = Pattern.compile("^(/index.html|/bd/goods|detail)");
+    private static final Pattern LoginCheckWhiteList = Pattern.compile("^(/good.jsp|/bd/goods|detail)");
     private static Logger log = LoggerFactory.getLogger(LoginInterceptor.class);
 
     @Override
