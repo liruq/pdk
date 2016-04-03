@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by hubo on 2015/8/25
+ *
  */
 public class CommonUtil {
 

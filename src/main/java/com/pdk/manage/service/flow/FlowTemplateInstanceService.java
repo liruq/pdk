@@ -38,7 +38,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * 流程实例服务类
- * Created by hubo on 2015/8/28
+ *
  */
 @Service
 public class FlowTemplateInstanceService extends BaseService <FlowTemplateInstance> {

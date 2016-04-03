@@ -8,9 +8,7 @@ import com.pdk.manage.util.DBConst;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- * Created by liuhaiming on 2015/10/12.
- */
+
 @Service
 public class ActRuleFactory {
     @Autowired

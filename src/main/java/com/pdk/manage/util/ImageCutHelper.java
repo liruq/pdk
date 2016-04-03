@@ -18,7 +18,7 @@ import java.io.InputStream;
 import java.util.Iterator;
 
 /**
- * Created by liuhaiming on 2015/9/5.
+ *
  */
 public class ImageCutHelper {
     /**

@@ -1,7 +1,7 @@
 package com.pdk.manage.util;
 
 /**
- * Created by liuhaiming on 2015/9/5.
+ *
  */
 public class CommonConst {
     /** 人员头像根目录 */

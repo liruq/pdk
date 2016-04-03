@@ -15,9 +15,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Created by liuhaiming on 2015/10/12.
- */
+
 @Service
 public class ShareFilterRule implements IActivitySendRule {
     @Autowired

@@ -27,7 +27,7 @@ import java.util.*;
 import java.util.concurrent.*;
 
 /**
- * Created by liuhaiming on 2015/9/11
+ *
  */
 @Service
 public class CouponActivityService extends BaseService<CouponActivity> {

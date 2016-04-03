@@ -10,9 +10,7 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.util.*;
 
-/**
- * Created by liuhaiming on 2015/10/12.
- */
+
 @Service
 public class ReviewFilterRule implements IActivitySendRule {
     @Override

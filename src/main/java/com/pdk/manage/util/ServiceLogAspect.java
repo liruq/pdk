@@ -9,8 +9,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by hubo on 15/8/28
- */
+
+        */
 @Aspect
 @Component
 public class ServiceLogAspect {

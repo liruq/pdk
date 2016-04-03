@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Created by hubo on 2015/8/7.
+ *
  */
 @Service
 public class EmployeeAuxiliaryService extends BaseService<EmployeeAuxiliary> {

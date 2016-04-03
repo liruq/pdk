@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import java.util.Date;
 
 /**
- * Created by liuhaiming on 2015/9/15.
+ * Created by
  */
 @Controller
 public class CouponSendJob {

@@ -7,7 +7,7 @@ import com.pdk.manage.util.IdGenerator;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by liuhaiming on 2015/8/29.
+ * Created by l
  */
 @Service
 public class PositionService extends BaseService<Position> {

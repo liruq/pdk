@@ -9,9 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by hubo on 2015/8/10
- */
+
 public class TreeUtil {
     /**
      * 构建树

@@ -6,9 +6,7 @@ import com.pdk.manage.model.sm.User;
 
 import java.util.List;
 
-/**
- * Created by liuhaiming on 2015/10/12.
- */
+
 public interface IActivitySendRule {
     List<Coupon> filterCoupons(List<Coupon> couponLst, User user) throws BusinessException;
 }

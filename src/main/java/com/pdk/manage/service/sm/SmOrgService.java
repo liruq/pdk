@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Created by liuhaiming on 2015/8/9.
+ *
  */
 @Service
 public class SmOrgService extends BaseService<Org> {

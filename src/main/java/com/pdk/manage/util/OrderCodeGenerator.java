@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by hubo on 2015/10/9
+ * C
  */
 public class OrderCodeGenerator {
     /**

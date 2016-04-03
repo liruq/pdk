@@ -1,7 +1,7 @@
 package com.pdk.manage.util;
 
 /**
- * Created by hubo on 15/8/11
+ *
  */
 public class IdGenerator {
 

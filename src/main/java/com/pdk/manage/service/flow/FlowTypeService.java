@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Created by hubo on 2015/8/12
+ *
  */
 @Service
 public class FlowTypeService extends BaseService<FlowType>{

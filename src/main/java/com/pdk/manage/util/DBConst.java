@@ -1,7 +1,7 @@
 package com.pdk.manage.util;
 
 /**
- * Created by hubo on 2015/8/13
+ *
  */
 public class DBConst {
 

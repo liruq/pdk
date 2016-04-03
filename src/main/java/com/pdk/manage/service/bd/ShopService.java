@@ -6,7 +6,7 @@ import com.pdk.manage.util.IdGenerator;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by liangyh on 2015/8/17.
+ * Created by
  */
 @Service
 public class ShopService extends BaseService<Shop> {

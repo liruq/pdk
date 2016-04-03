@@ -10,7 +10,7 @@ import java.security.Permission;
 import java.util.*;
 
 /**
- * Created by hubo on 2015/8/7.
+ *
  */
 @Service
 public class PermissionFuncService extends BaseService<PermissionFunc> {

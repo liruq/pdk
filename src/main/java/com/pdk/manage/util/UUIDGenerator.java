@@ -2,9 +2,7 @@ package com.pdk.manage.util;
 
 import java.util.UUID;
 
-/**
- * Created by hubo on 2015/9/2
- */
+
 public class UUIDGenerator {
 
     public static String generateUUID() {

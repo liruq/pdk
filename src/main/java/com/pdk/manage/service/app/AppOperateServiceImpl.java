@@ -27,8 +27,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * Created by 程祥 on 15/9/25.
- * Function： 手机端服务实现
+ * Created by
+ * Function：
  */
 @Service
 public class AppOperateServiceImpl {

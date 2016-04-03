@@ -6,7 +6,7 @@ import com.pdk.manage.model.sm.Func;
 import java.util.List;
 
 /**
- * Created by liuhaiming on 2015/8/9.
+ *
  */
 public interface FuncService {
 

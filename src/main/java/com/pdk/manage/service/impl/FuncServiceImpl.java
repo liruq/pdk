@@ -19,7 +19,7 @@ import java.util.HashSet;
 import java.util.List;
 
 /**
- * Created by liuhaiming on 2015/8/9
+ *
  */
 @Service
 public class FuncServiceImpl implements FuncService {

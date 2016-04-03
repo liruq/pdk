@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * Created by liuhaiming on 2015/8/30.
+ * Created by l
  */
 @Service
 public class AddressService extends BaseService<Address> {

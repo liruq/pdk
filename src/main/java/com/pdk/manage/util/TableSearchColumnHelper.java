@@ -8,9 +8,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.*;
 
-/**
- * Created by hubo on 2015/8/27
- */
+
 public class TableSearchColumnHelper {
 
     private final static Map<Class<?>, List<TableSearchColumn>> searchColumnMap = new HashMap<>();

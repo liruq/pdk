@@ -23,7 +23,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by hubo on 15/8/12
+ *
  */
 public class BaseService<T extends IBaseVO> {
 

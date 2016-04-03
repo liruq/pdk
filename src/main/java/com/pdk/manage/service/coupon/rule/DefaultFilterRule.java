@@ -11,9 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * Created by liuhaiming on 2015/10/12.
- */
+
 @Service
 public class DefaultFilterRule implements IActivitySendRule {
     @Override

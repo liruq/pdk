@@ -26,7 +26,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by liuhaiming on 2015/9/11
+ *
  */
 @Service
 public class CouponUserSendedService extends BaseService<CouponUserSended> {

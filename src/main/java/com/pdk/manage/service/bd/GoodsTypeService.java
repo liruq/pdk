@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * Created by liangyh on 2015/8/15.
+ * Created by l
  */
 @Service
 public class GoodsTypeService extends BaseService<GoodsType> {

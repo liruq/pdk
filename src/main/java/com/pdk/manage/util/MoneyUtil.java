@@ -3,7 +3,7 @@ package com.pdk.manage.util;
 import java.math.BigDecimal;
 
 /**
- * Created by 程祥 on 15/10/12.
+ *
  * Function： 金额工具类
  */
 public class MoneyUtil {

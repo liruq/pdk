@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * Created by liuhaiming on 2015/8/31.
+ * Created by l
  */
 @Service
 public class CityAreaService extends BaseService<CityArea> {

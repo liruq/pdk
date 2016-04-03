@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by liuhaiming on 2015/9/11
+ *
  */
 @Service
 public class CouponActivityTemplateBService extends BaseService<CouponActivityTemplateB> {
