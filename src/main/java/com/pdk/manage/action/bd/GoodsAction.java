@@ -16,6 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.util.*;
@@ -218,9 +219,12 @@ public class GoodsAction {
     }
 
     @RequestMapping("/goods")
-    @ResponseBody
-    public List<Goods> getGoodsList(int page){
-        return service.querybyPage(page);
+    public ModelAndView getGoodsList(@RequestParam(defaultValue = "1") int page,String key){
+        ModelAndView mv=new ModelAndView("good");
+        List<Goods> list=service.querybyPage(page,key);
+        mv.addObject("list",list);
+        mv.addObject("apple","appleapple");
+        return mv;
     }
 
 

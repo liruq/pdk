@@ -390,7 +390,7 @@
 			<!-- 开发环境 -->
 			<id>dev</id>
 			<properties>
-				<jdbc_url>jdbc:mysql://127.0.0.1:3307/book?autoReconnect=true</jdbc_url>
+				<jdbc_url>jdbc:mysql://127.0.0.1:3306/book?autoReconnect=true</jdbc_url>
 			</properties>
 			<!-- 默认激活本环境 -->
 			<activation>
@@ -402,7 +402,7 @@
 			<!-- 测试环境 -->
 			<id>test</id>
 			<properties>
-				<jdbc_url>jdbc:mysql://127.0.0.1:3307/book?autoReconnect=true</jdbc_url>
+				<jdbc_url>jdbc:mysql://127.0.0.1:3306/book?autoReconnect=true</jdbc_url>
 			</properties>
 		</profile>
 	</profiles>

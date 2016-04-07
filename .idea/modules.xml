@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/lanyuan-notebook-3.1v.iml" filepath="$PROJECT_DIR$/lanyuan-notebook-3.1v.iml" />
+      <module fileurl="file://$PROJECT_DIR$/book.iml" filepath="$PROJECT_DIR$/book.iml" />
     </modules>
   </component>
 </project>

@@ -69,7 +69,7 @@ public class GoodsService  extends BaseService<Goods> {
         return count > 0;
     }
 
-    public List<Goods> querybyPage(int page){
-        return getDao().querybyPage(page*10-10,page*10);
+    public List<Goods> querybyPage(int page, String key){
+        return getDao().querybyPage(page*10-10,page*10,key);
     }
 }

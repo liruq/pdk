@@ -17,16 +17,24 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+      <profile default="false" name="Annotation profile for lanyuan-notebook-3.1v" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="lanyuan-notebook-3.1v" />
       </profile>
+      <profile default="false" name="Annotation profile for book" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="book" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="lanyuan-notebook-3.1v" target="1.7" />
+      <module name="book" target="1.7" />
+      <module name="lanyuan-notebook-3.1v" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
