@@ -2,6 +2,7 @@ package com.pdk.manage.action;
 
 import com.pdk.manage.dto.sm.FuncDto;
 import com.pdk.manage.model.sm.Employee;
+import com.pdk.manage.model.sm.User;
 import com.pdk.manage.service.FuncService;
 import com.pdk.manage.service.sm.EmployeeService;
 import com.pdk.manage.util.CommonConst;
@@ -83,5 +84,10 @@ public class LoginAction {
         session.invalidate();
 
         return "redirect:/";
+    }
+
+    @RequestMapping("signIn")
+    public String signIn(User user){
+        return null;
     }
 }
