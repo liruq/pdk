@@ -25,18 +25,7 @@
 
     <!-- BEGIN PAGE TOP -->
     <div class="page-top">
-      <!-- BEGIN HEADER SEARCH BOX -->
-      <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
-      <form class="search-form" action="extra_search.html" method="GET">
-        <div class="input-group">
-          <input type="text" class="form-control input-sm" placeholder="Search..." name="query">
-					<span class="input-group-btn">
-					<a href="javascript:void(0)" class="btn submit"><i class="icon-magnifier"></i></a>
-					</span>
-        </div>
-      </form>
-      <!-- END HEADER SEARCH BOX -->
-      <!-- BEGIN TOP NAVIGATION MENU -->
+
       <div class="top-menu">
         <ul class="nav navbar-nav pull-right">
           <li class="separator hide">
@@ -45,23 +34,7 @@
           </li>
           <!-- BEGIN INBOX DROPDOWN -->
           <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-          <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_bar">
-            <a href="javascript:void(0);" class="dropdown-toggle inbox" data-toggle="dropdown" data-hover="dropdown"
-               data-close-others="true">
-              <i class="icon-envelope-open"></i> 收件箱
-						<span class="badge badge-danger msg_count"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="external">
-                <h3>你有 <span class="bold text-danger msg_count"></span> 条新的消息</h3>
-                <a href="inbox.html">查看所有</a>
-              </li>
-              <li>
-                <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
-                </ul>
-              </li>
-            </ul>
-          </li>
+
           <!-- END INBOX DROPDOWN -->
           <li class="separator hide">
           </li>
