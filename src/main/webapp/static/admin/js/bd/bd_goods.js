@@ -157,6 +157,35 @@ function initTable() {
 
 }
 
+function initTable2buyer() {
+
+	PdkDataTable.init({
+		"tableId": "bd-goods-table",
+		"url": 'bd/bd_goods/table_data_buy',
+		"columns": [
+			{ "data": "checked" },
+			{ "data": "index" },
+			{ "data": "code" },
+			{ "data": "name" },
+			{ "data": "goodstypeName"},
+			{ "data": "statusName" },
+			{ "data": "memo" }
+		],
+
+		"columnDefs": [{ // set default column settings
+			'orderable': false,
+			'targets': [0, 1, 6]
+		}, {
+			"searchable": false,
+			"targets": [0, 1]
+		}],
+		"order": [
+			[2, "asc"]
+		]
+	});
+
+}
+
 function save() {
 	$("#goodsDetailForm").submit();
 }

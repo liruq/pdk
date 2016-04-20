@@ -32,6 +32,9 @@ public interface GoodsDao extends BaseDao<Goods>, BusinessLogicMapper<Goods> {
     @Select("select *,b.name as goodsType from pdk_bd_goods a left join pdk_bd_goodstype b on a.goodstype_id=b.id where a.user=#{user}")
     List<Goods> queryByUser(@Param("user")String user);
 
+    @Select("select *,b.name as goodsType from pdk_bd_goods a left join pdk_bd_goodstype b on a.goodstype_id=b.id where a.buyer=#{buyer}")
+    List<Goods> queryByBuyer(@Param("buyer")String buyer);
+
     @Select("select * from pdk_bd_goodstype where name=#{name} limit 1")
     GoodsType getGoodTypeByName(String goodsType);
 

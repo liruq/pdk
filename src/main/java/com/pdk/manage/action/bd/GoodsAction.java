@@ -40,6 +40,12 @@ public class GoodsAction {
         return "bd/bd_goods";
     }
 
+    @RequestMapping("/bd_goods_buy")
+    public String buy() {
+        return "bd/bd_goods_buyed";
+    }
+
+
     @ModelAttribute
     public void getFlowType(@RequestParam(value = "id", required = false) String id, Map<String, Object> map) {
         if (StringUtils.isNotEmpty(id)) {
@@ -205,7 +211,40 @@ public class GoodsAction {
 
         PageInfo<Goods> pageInfo = null;
         try {
-            pageInfo = service.mySelectLikePage(arg.getSearchText(), arg.getPageNum(), arg.getLength(), arg.getOrderStr(), request);
+            pageInfo = service.mySelectLikePage(arg.getSearchText(), arg.getPageNum(), arg.getLength(), arg.getOrderStr(), request,false);
+//            pageInfo = service.qryByPage(arg.getPageNum(), arg.getLength(), arg.getOrderStr(), arg.getQryCode(), arg.getQryName(),arg.getGoodstypeid());
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+        }
+
+        List<GoodsJson> data = new ArrayList<>();
+
+        int index = 1;
+
+        for (Goods goods : pageInfo.getList()) {
+//            data.add(new GoodsJson(index, goods.getId(), goods.getCode(), goods.getName(), goods.getStatus(), goods.getMemo(), goods.getTs()));
+            data.add(new GoodsJson(index, goods));
+            index++;
+        }
+
+        result.put("draw", arg.getDraw());
+        result.put("recordsTotal", pageInfo.getTotal());
+        result.put("recordsFiltered", pageInfo.getTotal());
+        result.put("data", data);
+        return result;
+
+    }
+
+    @RequestMapping("/bd_goods/table_data_buy")
+    public
+    @ResponseBody
+    Map<String, Object> list2buy(BDGoodsDataTableQueryArgWapper arg, HttpServletRequest request, String funcActiveCode) {
+
+        Map<String, Object> result = new HashMap<>();
+
+        PageInfo<Goods> pageInfo = null;
+        try {
+            pageInfo = service.mySelectLikePage(arg.getSearchText(), arg.getPageNum(), arg.getLength(), arg.getOrderStr(), request, true);
 //            pageInfo = service.qryByPage(arg.getPageNum(), arg.getLength(), arg.getOrderStr(), arg.getQryCode(), arg.getQryName(),arg.getGoodstypeid());
         } catch (Exception e) {
             log.error(e.getMessage(), e);
