@@ -18,6 +18,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.*;
 
@@ -188,13 +189,13 @@ public class GoodsAction {
 
 
     @RequestMapping("/bd_goods/table_data")
-    public @ResponseBody Map<String, Object> list( BDGoodsDataTableQueryArgWapper arg) {
+    public @ResponseBody Map<String, Object> list(BDGoodsDataTableQueryArgWapper arg, HttpServletRequest request) {
 
         Map<String, Object> result = new HashMap<>();
 
         PageInfo<Goods> pageInfo = null;
         try {
-            pageInfo = service.mySelectLikePage(arg.getSearchText(), arg.getPageNum(), arg.getLength(), arg.getOrderStr());
+            pageInfo = service.mySelectLikePage(arg.getSearchText(), arg.getPageNum(), arg.getLength(), arg.getOrderStr(),request);
 //            pageInfo = service.qryByPage(arg.getPageNum(), arg.getLength(), arg.getOrderStr(), arg.getQryCode(), arg.getQryName(),arg.getGoodstypeid());
         } catch (Exception e) {
             log.error(e.getMessage(),e);

@@ -176,17 +176,17 @@
                           <label class="control-label ">状态：</label>
                           <input type="text" name="status" class="form-control" value="${employee.statusName}" readonly="false" />
                         </div>
-                        <div class="form-group">
-                          <label class="control-label">所属区域：</label>
-                          <input type="text" name="orgName" class="form-control" value="${employee.orgName}" readonly="false" />
-                        </div>
+                        <%--<div class="form-group">--%>
+                          <%--<label class="control-label">所属区域：</label>--%>
+                          <%--<input type="text" name="orgName" class="form-control" value="${employee.orgName}" readonly="false" />--%>
+                        <%--</div>--%>
 
                         <div class="form-group">
                           <label class="control-label ">角色：</label>
                           <input type="text" name="roleName" class="form-control" value="${employee.roleName}" readonly="false" />
                         </div>
                         <div class="form-group">
-                          <label class="control-label ">职位：</label>
+                          <label class="control-label ">用户类型：</label>
                           <input type="text" name="positionName" class="form-control" value="${employee.positionName}" readonly="false" />
                         </div>
                         <div class="form-group">

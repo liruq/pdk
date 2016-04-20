@@ -21,7 +21,7 @@
 <head>
   <base href="<%=basePath%>">
   <meta charset="utf-8"/>
-  <title>跑的快 | 后台管理系统-商品管理</title>
+  <title>后台管理系统-商品管理</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -171,7 +171,10 @@
               <label class="control-label">商品名称：</label>
               <input type="text" name="name" class="form-control" maxlength="50" placeholder="请输入商品名称" />
             </div>
-
+            <div class="form-group">
+              <label class="control-label">商品价格：</label>
+              <input type="text" name="name" class="form-control" maxlength="50" placeholder="请输入商品名称" />
+            </div>
             <div class="form-group">
               <label class="control-label ">商品种类：</label>
               <div class="input-group">

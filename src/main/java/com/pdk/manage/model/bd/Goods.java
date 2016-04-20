@@ -27,7 +27,7 @@ public class Goods  implements IBaseVO {
     private String name;
 
     @RelationColumn(column="goodstype_id", relationKey="com.pdk.manage.model.bd.GoodsType")
-    private String goodstypeId;
+    private String goodstype_id;
 
     @Transient
     private GoodsType goodsType;
@@ -43,9 +43,10 @@ public class Goods  implements IBaseVO {
 
     private Short dr;
 
-    private double price;
+    private String price;
     private String user;
     private String img;
+    private String buyer;
 
     public String getId() {
         return id;
@@ -71,12 +72,12 @@ public class Goods  implements IBaseVO {
         this.name = name == null ? null : name.trim();
     }
 
-    public String getGoodstypeId() {
-        return goodstypeId;
+    public String getGoodstype_id() {
+        return goodstype_id;
     }
 
-    public void setGoodstypeId(String goodstypeId) {
-        this.goodstypeId = goodstypeId == null ? null : goodstypeId.trim();
+    public void setGoodstype_id(String goodstype_id) {
+        this.goodstype_id = goodstype_id;
     }
 
     public Short getStatus() {
@@ -119,11 +120,11 @@ public class Goods  implements IBaseVO {
         this.goodsType = goodsType;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -141,5 +142,13 @@ public class Goods  implements IBaseVO {
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public String getBuyer() {
+        return buyer;
+    }
+
+    public void setBuyer(String buyer) {
+        this.buyer = buyer;
     }
 }

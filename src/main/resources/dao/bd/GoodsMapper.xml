@@ -5,11 +5,15 @@
     <id column="id" property="id" jdbcType="CHAR" />
     <result column="code" property="code" jdbcType="VARCHAR" />
     <result column="name" property="name" jdbcType="VARCHAR" />
-    <result column="goodstype_id" property="goodstypeId" jdbcType="CHAR" />
+    <result column="goodstype_id" property="goodstype_id" jdbcType="CHAR" />
     <result column="status" property="status" jdbcType="SMALLINT" />
     <result column="memo" property="memo" jdbcType="VARCHAR" />
     <result column="ts" property="ts" jdbcType="TIMESTAMP" />
     <result column="dr" property="dr" jdbcType="SMALLINT" />
+    <result column="price" property="price" jdbcType="VARCHAR" />
+    <result column="user" property="user" jdbcType="VARCHAR" />
+    <result column="img" property="img" jdbcType="VARCHAR" />
+    <result column="buyer" property="buyer" jdbcType="VARCHAR" />
     <association property="goodsType" javaType="com.pdk.manage.model.bd.GoodsType"
                  resultMap="com.pdk.manage.dao.bd.GoodsTypeDao.BaseResultMap" columnPrefix="goodstype_"/>
   </resultMap>
@@ -26,6 +30,8 @@
     t.dr,
     t.price,
     t.user,
+    t.img,
+    t.buyer,
     r.name as goodstype_name
     from pdk_bd_goods t
     left join pdk_bd_goodstype r on t.goodstype_id = r.id
@@ -50,8 +56,9 @@
       t.ts,
       t.dr,
       t.price,
-      t.user,
-      t.img,
+        t.user,
+        t.img,
+        t.buyer,
       r.name as goodstype_name
     from pdk_bd_goods t
     left join pdk_bd_goodstype r on t.goodstype_id = r.id
@@ -69,9 +76,10 @@
         t.memo,
         t.ts,
         t.dr,
-            t.price,
-    t.user,
-    t.img,
+        t.price,
+        t.user,
+        t.img,
+        t.buyer,
         r.name as goodstype_name
       from pdk_bd_goods t
       left join pdk_bd_goodstype r on t.goodstype_id = r.id
@@ -89,8 +97,10 @@
         t.memo,
         t.ts,
         t.dr,
-            t.price,
-    t.user,t.img,
+        t.price,
+        t.user,
+        t.img,
+        t.buyer,
         r.name as goodstype_name
       from pdk_bd_goods t
       left join pdk_bd_goodstype r on t.goodstype_id = r.id
@@ -127,8 +137,10 @@
         t.memo,
         t.ts,
         t.dr,
-            t.price,
-    t.user,t.img,
+        t.price,
+        t.user,
+        t.img,
+        t.buyer,
         r.name as goodstype_name
       from pdk_bd_goods t
       left join pdk_bd_goodstype r on t.goodstype_id = r.id
@@ -147,8 +159,10 @@
     t.memo,
     t.ts,
     t.dr,
-        t.price,
-    t.user,t.img,
+    t.price,
+    t.user,
+    t.img,
+    t.buyer,
     r.name as goodstype_name
     from pdk_bd_goods t
     left join pdk_bd_goodstype r on t.goodstype_id = r.id

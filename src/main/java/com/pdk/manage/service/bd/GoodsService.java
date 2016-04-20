@@ -4,11 +4,14 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.pdk.manage.dao.bd.GoodsDao;
 import com.pdk.manage.model.bd.Goods;
+import com.pdk.manage.model.sm.Employee;
 import com.pdk.manage.service.BaseService;
+import com.pdk.manage.service.sm.EmployeeService;
 import com.pdk.manage.util.IdGenerator;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -21,6 +24,8 @@ public class GoodsService  extends BaseService<Goods> {
         return IdGenerator.BD_MODULE_CODE;
     }
 
+    @Resource
+    EmployeeService employeeService;
 
     /**
      * 单表分页查询
@@ -51,16 +56,20 @@ public class GoodsService  extends BaseService<Goods> {
         return (GoodsDao)this.dao;
     }
 
-    public PageInfo<Goods> mySelectLikePage(String searchText, int pageNum, int pageSize, String orderBy) {
+    public PageInfo<Goods> mySelectLikePage(String searchText, int pageNum, int pageSize, String orderBy, HttpServletRequest request) {
         PageInfo<Goods> goodsPageInfo = null;
         PageHelper.startPage(pageNum, pageSize, orderBy);
-        if (StringUtils.isEmpty(searchText)) {
+//        if (StringUtils.isEmpty(searchText)) {
+//            goodsPageInfo = new PageInfo<>(getDao().mySelect());
+//        } else {
+//            goodsPageInfo = new PageInfo<>(getDao().mySelectLike(searchText));
+//        }
+        Employee employee = (Employee) request.getSession().getAttribute("user");
+        if (employee.getPosition().getName().equals("管理员")) {
             goodsPageInfo = new PageInfo<>(getDao().mySelect());
         } else {
-            goodsPageInfo = new PageInfo<>(getDao().mySelectLike(searchText));
+            goodsPageInfo = new PageInfo<>(getDao().queryByUser(employee.getId()));
         }
-
-
         return goodsPageInfo;
     }
 

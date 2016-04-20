@@ -129,21 +129,21 @@
                       </div>
                     </div>
 
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label class="control-label col-md-3">所属区域：</label>
-                        <div class="col-md-9">
-                          <div class="input-group">
-                            <input type="hidden" id = "qryOrgId" name="qryOrgId" class="form-control" />
-                            <input type="text" id = "qryOrgName" name="qryOrgName" class="form-control" readonly  onclick="showOrgTreeRefDlg('qryOrgId', 'qryOrgName', false)"/>
-                            <span class="input-group-btn" >
-                              <button class="btn btn-default" type="button" onclick="showOrgTreeRefDlg('qryOrgId', 'qryOrgName', false)"><i class="fa fa-search"></i></button>
-                              <button class="btn btn-default" type="button" onclick="$('#qryOrgId').val(null);$('#qryOrgName').val(null)"><i class="fa fa-remove"></i></button>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <%--<div class="col-md-6">--%>
+                      <%--<div class="form-group">--%>
+                        <%--<label class="control-label col-md-3">所属区域：</label>--%>
+                        <%--<div class="col-md-9">--%>
+                          <%--<div class="input-group">--%>
+                            <%--<input type="hidden" id = "qryOrgId" name="qryOrgId" class="form-control" />--%>
+                            <%--<input type="text" id = "qryOrgName" name="qryOrgName" class="form-control" readonly  onclick="showOrgTreeRefDlg('qryOrgId', 'qryOrgName', false)"/>--%>
+                            <%--<span class="input-group-btn" >--%>
+                              <%--<button class="btn btn-default" type="button" onclick="showOrgTreeRefDlg('qryOrgId', 'qryOrgName', false)"><i class="fa fa-search"></i></button>--%>
+                              <%--<button class="btn btn-default" type="button" onclick="$('#qryOrgId').val(null);$('#qryOrgName').val(null)"><i class="fa fa-remove"></i></button>--%>
+                            <%--</span>--%>
+                          <%--</div>--%>
+                        <%--</div>--%>
+                      <%--</div>--%>
+                    <%--</div>--%>
                   </div>
                   <div class="row">
                     <div class="col-md-6">

@@ -110,6 +110,7 @@ function initGoods() {
 						form.find("[name = 'id']").val(flowType.id);
 						form.find("[name = 'code']").val(flowType.code);
 						form.find("[name = 'name']").val(flowType.name);
+						form.find("[name = 'price']").val(flowType.price);
 						form.find("[name = 'goodstypeId']").val(flowType.goodstypeId);
 						form.find("[name = 'goodstypeName']").val(flowType.goodstypeName);
 						form.find("[name = 'memo']").val(flowType.memo);

@@ -2,7 +2,6 @@ package com.pdk.manage.dto.bd;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.pdk.manage.model.bd.Goods;
-import com.pdk.manage.model.bd.GoodsType;
 import com.pdk.manage.util.DBConst;
 
 import java.util.Date;
@@ -47,7 +46,7 @@ public class GoodsJson {
         } else  if(status == DBConst.STATUS_DISABLE){
             statusName = "禁用";
         }
-        this.goodstypeId = goods.getGoodstypeId();
+        this.goodstypeId = goods.getGoodstype_id();
 
         if ( goods.getGoodsType() != null ) {
             this.goodstypeName = goods.getGoodsType().getName();

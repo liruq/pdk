@@ -31,6 +31,8 @@ public class GoodsEditJson {
 
     private Date ts;
 
+    private String price;
+
     public GoodsEditJson(int index, String id, String code, String name, int status, String memo, Date ts) {
         this.id = id;
         this.index = index;
@@ -59,8 +61,9 @@ public class GoodsEditJson {
         } else  if(status == 1){
             statusName = "禁用";
         }
-        this.goodstypeId = goods.getGoodstypeId();
+        this.goodstypeId = goods.getGoodstype_id();
         this.goodstypeName = goods.getGoodsType().getName();
+        this.price=goods.getPrice();
     }
 
     public GoodsEditJson() {
@@ -155,4 +158,11 @@ public class GoodsEditJson {
         this.goodstypeName = goodstypeName;
     }
 
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
 }

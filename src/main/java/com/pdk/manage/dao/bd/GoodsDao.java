@@ -24,6 +24,9 @@ public interface GoodsDao extends BaseDao<Goods>, BusinessLogicMapper<Goods> {
     @SelectProvider(type = GoodsProvider.class,method = "genQuerybyPage")
     List<Goods> querybyPage(@Param("offset")int offset,@Param("limit")int limit,@Param("key")String key);
 
-    @Select("select * from pdk_bd_goods where id=#{id}")
+    @Select("select *,b.name as goodsType from pdk_bd_goods a left join pdk_bd_goodstype b on a.goodstype_id=b.id where id=#{id}")
     Goods querybyId(@Param("id")String id);
+
+    @Select("select *,b.name as goodsType from pdk_bd_goods a left join pdk_bd_goodstype b on a.goodstype_id=b.id where a.user=#{user}")
+    List<Goods> queryByUser(@Param("user")String user);
 }
