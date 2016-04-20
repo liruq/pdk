@@ -50,8 +50,9 @@ String resourcePath = request.getServletContext().getInitParameter("resource_pat
 	<a href="#" class="fh5co-offcanvass-close js-fh5co-offcanvass-close">菜单 <i class="icon-cross"></i> </a>
 	<h1 class="fh5co-logo"><a class="navbar-brand" href="index.html">二手市场</a></h1>
 	<ul>
-		<li><a href="index.html">登录</a></li>
+		<li><a href="<%=resourcePath%>index">登录</a></li>
 		<li><a href="<%=resourcePath%>signIn">注册</a></li>
+		<li><a href="<%=resourcePath%>index">后台管理系统</a></li>
 	</ul>
 	<h3 class="fh5co-lead">Connect with us</h3>
 	<p class="fh5co-social-icons">

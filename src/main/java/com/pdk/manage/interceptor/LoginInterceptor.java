@@ -16,7 +16,7 @@ import java.util.Set;
 import java.util.regex.Pattern;
 
 /**
- * Created by hubo on 2015/8/8
+ *
  */
 public class LoginInterceptor  implements HandlerInterceptor{
 
@@ -26,6 +26,9 @@ public class LoginInterceptor  implements HandlerInterceptor{
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String uri = request.getRequestURI();
+        if(uri.equals("/")){
+            return true;
+        }
         Boolean isLogin =  (Boolean)request.getSession().getAttribute("isLogin");
         if (LoginCheckWhiteList.matcher(uri).find()) {
             return true;

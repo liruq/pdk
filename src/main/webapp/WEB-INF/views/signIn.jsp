@@ -147,7 +147,7 @@
                           <input type="hidden" name="_method" value="POST"/>
                         </div>
                         <div class="form-group">
-                          <label class="control-label">编码：</label>
+                          <label class="control-label">账号：</label>
                             <input type="text" name="code" class="form-control" maxlength="20" value="${employee.code}" placeholder="请输入编码"/>
                         </div>
                         <div class="form-group">

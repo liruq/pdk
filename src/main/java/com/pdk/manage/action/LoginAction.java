@@ -37,6 +37,16 @@ public class LoginAction {
     @Autowired
     private HttpSession session;
 
+    @RequestMapping("/")
+    public String good(){
+        return "redirect:/bd/goods";
+    }
+
+    @RequestMapping("/index")
+    public ModelAndView index(){
+        return new ModelAndView("index");
+    }
+
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(String username, String password, String validateCode, Map<String, Object> map, HttpServletRequest request) {
         String path = request.getContextPath();

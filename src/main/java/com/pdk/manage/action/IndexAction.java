@@ -28,16 +28,16 @@ public class IndexAction {
     @Autowired
     private ReportIndexService reportIndexService;
 
-    @RequestMapping("/")
-    public String index() {
-        String rtnUri;
-        if (hasPermession()) {
-            rtnUri = "index";
-        } else {
-            rtnUri = "blank";
-        }
-        return rtnUri;
-    }
+//    @RequestMapping("/")
+//    public String index() {
+//        String rtnUri;
+//        if (hasPermession()) {
+//            rtnUri = "index";
+//        } else {
+//            rtnUri = "blank";
+//        }
+//        return rtnUri;
+//    }
 
     private boolean hasPermession() {
         List<FuncDto> permissionFuncs = (List<FuncDto>) session.getAttribute(CommonConst.SESSION_ATTR_KEY_PERMISSION_FUNCS);
