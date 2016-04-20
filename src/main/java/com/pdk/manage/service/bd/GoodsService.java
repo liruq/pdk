@@ -72,4 +72,8 @@ public class GoodsService  extends BaseService<Goods> {
     public List<Goods> querybyPage(int page, String key){
         return getDao().querybyPage(page*10-10,page*10,key);
     }
+
+    public Goods querybyId(String id) {
+        return getDao().querybyId(id);
+    }
 }

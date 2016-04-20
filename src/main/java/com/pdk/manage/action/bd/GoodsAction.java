@@ -223,9 +223,21 @@ public class GoodsAction {
         ModelAndView mv=new ModelAndView("good");
         List<Goods> list=service.querybyPage(page,key);
         mv.addObject("list",list);
-        mv.addObject("apple","appleapple");
         return mv;
     }
+
+    @RequestMapping("/goodDetail")
+    public ModelAndView getGoodsDetail(String id){
+        ModelAndView mv=new ModelAndView("goodDetail");
+        Goods goods=service.querybyId(id);
+        mv.addObject("good",goods);
+        return mv;
+    }
+
+//    @RequestMapping("/buy")
+//    public ModelAndView buy(String id){
+//
+//    }
 
 
 }

@@ -100,6 +100,8 @@ String resourcePath = request.getServletContext().getInitParameter("resource_pat
 						<div class="animate-box">
 							<a href="<%=basePath%><c:out value="${good.img}"/>" class="image-popup fh5co-board-img"><img src="<%=basePath%><c:out value="${good.img}"/>" alt="Free HTML5 Bootstrap template"></a>
 							<div class="fh5co-desc"><c:out value="${good.memo}"/></div>
+							<div class="fh5co-desc"><c:out value="￥${good.price}"/></div>
+							<div><a href="<%=basePath%>bd/goodDetail?id=<c:out value="${good.id}"/>" class="fh5co-desc">详情</a></div>
 						</div>
 					</div>
 
