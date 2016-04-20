@@ -101,7 +101,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="control-label col-md-3">员工编号：</label>
+                        <label class="control-label col-md-3">编号：</label>
 
                         <div class="col-md-9">
                           <input type="text" id="qryCode" name="qryCode" class="form-control" />
@@ -110,7 +110,7 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="control-label col-md-3">员工姓名：</label>
+                        <label class="control-label col-md-3">姓名：</label>
 
                         <div class="col-md-9">
                           <input type="text" id="qryName" name="qryName" class="form-control" />
@@ -121,7 +121,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="control-label col-md-3">员工角色：</label>
+                        <label class="control-label col-md-3">角色：</label>
                         <div class="col-md-9">
                           <select id="qrySelRole" name="qrySelRole" multiple="true" class="form-control select2me">
                           </select>
@@ -197,12 +197,12 @@
                                data-set="#employee-table .checkboxes"/>
                       </th>
                       <th name="index">序号</th>
-                      <th name="code">员工编号</th>
-                      <th name="linkName">员工姓名</th>
+                      <th name="code">编号</th>
+                      <th name="linkName">姓名</th>
                       <th name="statusName">状态</th>
-                      <th name="orgName">所属区域</th>
-                      <th name="roleName">员工角色</th>
-                      <th name="positionName">员工职位</th>
+                      <th name="orgName"></th>
+                      <th name="roleName">角色</th>
+                      <th name="positionName">用户类型</th>
                       <th name="sexName">性别</th>
                       <th name="idCard">身份证号</th>
                       <th name="phone">电话</th>

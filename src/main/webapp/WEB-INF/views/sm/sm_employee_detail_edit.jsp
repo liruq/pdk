@@ -147,70 +147,51 @@
                           <input type="hidden" name="_method" value="POST"/>
                         </div>
                         <div class="form-group">
-                          <label class="control-label">员工编码：</label>
-                          <c:if test="${!hasPermession}">
-                            <input type="text" name="code" class="form-control" value="${employee.code}" readonly="false" />
-                          </c:if>
-                          <c:if test="${hasPermession}">
-                            <input type="text" name="code" class="form-control" maxlength="20" value="${employee.code}" placeholder="请输入员工编码"/>
-                          </c:if>
+                          <label class="control-label">编码：</label>
+                            <input type="text" name="code" class="form-control" maxlength="20" value="${employee.code}" placeholder="请输入编码"/>
                         </div>
                         <div class="form-group">
-                          <label class="control-label">员工姓名：</label>
-                          <input type="text" name="name" autocomplete="false" class="form-control" value="${employee.name}" maxlength="50" placeholder="请输入员工姓名"/>
+                          <label class="control-label">姓名：</label>
+                          <input type="text" name="name" autocomplete="false" class="form-control" value="${employee.name}" maxlength="50" placeholder="请输入姓名"/>
                         </div>
                         <div class="form-group">
-                          <label class="control-label">员工密码：</label>
+                          <label class="control-label">密码：</label>
                           <input type="password" name="password" class="form-control" value="${employee.password}" maxlength="32" placeholder="请输入密码"/>
                         </div>
                         <div class="form-group">
                           <label class="control-label ">状态：</label>
-                          <c:if test="${!hasPermession}">
-                            <input type="text" name="statusName" class="form-control" value="${employee.statusName}" readonly="false" />
-                          </c:if>
-                          <c:if test="${hasPermession}">
                             <select id="status" name="status" class="form-control select2me">
                               <option value="0">启用</option>
                               <option value="1">禁用</option>
                             </select>
-                          </c:if>
                         </div>
-                        <div class="form-group">
-                          <label class="control-label ">所属区域：</label>
-                          <c:if test="${!hasPermession}">
-                          <input type="text" name="orgName" class="form-control" value="${employee.orgName}" readonly="false" />
-                          </c:if>
-                          <c:if test="${hasPermession}">
-                          <div id="orgGroup" name="orgGroup" class="input-group">
-                            <input type="hidden" id="orgId" name="orgId" class="form-control" value="${employee.orgId}" placeholder="" readonly/>
-                            <input type="text" id = "orgName" name="orgName" class="form-control pdk-valid" value="${employee.orgName}" onclick="showOrgTreeRefDlg('orgId', 'orgName', true)" readonly/>
-                            <span class="input-group-btn">
-                            <button class="btn btn-default" type="button" onclick="showOrgTreeRefDlg('orgId', 'orgName', true)"><i class="fa fa-search"></i></button>
-                            <button class="btn btn-default" type="button" onclick="$('#orgId').val(null);$('#orgName').val(null)"><i class="fa fa-remove"></i></button>
-                            </span>
-                          </div>
-                          </c:if>
-                        </div>
+                        <%--<div class="form-group">--%>
+                          <%--<label class="control-label ">所属区域：</label>--%>
+                        <%----%>
+                          <%--<div id="orgGroup" name="orgGroup" class="input-group">--%>
+                            <%--<input type="hidden" id="orgId" name="orgId" class="form-control" value="${employee.orgId}" placeholder="" readonly/>--%>
+                            <%--<input type="text" id = "orgName" name="orgName" class="form-control pdk-valid" value="${employee.orgName}" onclick="showOrgTreeRefDlg('orgId', 'orgName', true)" readonly/>--%>
+                            <%--<span class="input-group-btn">--%>
+                            <%--<button class="btn btn-default" type="button" onclick="showOrgTreeRefDlg('orgId', 'orgName', true)"><i class="fa fa-search"></i></button>--%>
+                            <%--<button class="btn btn-default" type="button" onclick="$('#orgId').val(null);$('#orgName').val(null)"><i class="fa fa-remove"></i></button>--%>
+                            <%--</span>--%>
+                          <%--</div>--%>
+                          <%----%>
+                        <%--</div>--%>
 
                         <div class="form-group">
-                          <label class="control-label ">员工角色：</label>
-                          <c:if test="${!hasPermession}">
-                            <input type="text" name="roleName" class="form-control" value="${employee.roleName}" readonly="false" />
-                          </c:if>
-                          <c:if test="${hasPermession}">
+                          <label class="control-label ">角色：</label>
+                      
                             <select id="roleId" name="roleId" class="form-control select2me pdk-valid" >
                             </select>
-                          </c:if>
+                         
                         </div>
                         <div class="form-group">
-                          <label class="control-label ">员工职位：</label>
-                          <c:if test="${!hasPermession}">
-                            <input type="text" name="positionName" class="form-control" value="${employee.positionName}" readonly="false" />
-                          </c:if>
-                          <c:if test="${hasPermession}">
+                          <label class="control-label ">用户类型：</label>
+
                             <select id="positionId" name="positionId" class="form-control select2me pdk-valid">
                             </select>
-                          </c:if>
+
                         </div>
                         <div class="form-group">
                           <label class="control-label ">性别：</label>
@@ -230,12 +211,12 @@
                           <input type="text" name="phone" value="${employee.phone}" class="form-control mask_phone" maxlength="11" placeholder=""/>
                         </div>
 
-                        <c:if test="${hasPermession}">
+                       
                         <div class="form-group">
                           <label class="control-label">备注：</label>
                           <textarea type="text" name="memo" class="form-control" style="max-width:100%;" rows=3 maxlength="400" placeholder="">${employee.memo}</textarea>
                         </div>
-                        </c:if>
+                       
                         <div class="modal-footer">
                           <button type="button" class="btn btn-primary" onclick="save()">保存</button>
                           <button type="button" class="btn btn-default" onclick="cancel()">取消</button>

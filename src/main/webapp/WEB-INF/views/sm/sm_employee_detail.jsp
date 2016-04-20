@@ -157,19 +157,19 @@
                           <input type="hidden" name="_method" value="POST"/>
                         </div>
                         <div class="form-group">
-                          <a class="control-label" onclick="showEmployeeReviewDialog();">员工评价：${employee.score}</a>
+                          <a class="control-label" onclick="showEmployeeReviewDialog();">评价：${employee.score}</a>
                           <div id="start"></div>
                         </div>
                         <div class="form-group">
-                          <label class="control-label">员工编码：</label>
+                          <label class="control-label">编码：</label>
                           <input type="text" name="code" class="form-control" maxlength="20" value="${employee.code}" readonly="false" />
                         </div>
                         <div class="form-group">
-                          <label class="control-label">员工姓名：</label>
+                          <label class="control-label">姓名：</label>
                           <input type="text" name="name" autocomplete="false" class="form-control" value="${employee.name}" readonly="false"  />
                         </div>
                         <div class="form-group">
-                          <label class="control-label">员工密码：</label>
+                          <label class="control-label">密码：</label>
                           <input type="password" name="password" class="form-control" value="${employee.password}" readonly="false" />
                         </div>
                         <div class="form-group">
@@ -182,11 +182,11 @@
                         </div>
 
                         <div class="form-group">
-                          <label class="control-label ">员工角色：</label>
+                          <label class="control-label ">角色：</label>
                           <input type="text" name="roleName" class="form-control" value="${employee.roleName}" readonly="false" />
                         </div>
                         <div class="form-group">
-                          <label class="control-label ">员工职位：</label>
+                          <label class="control-label ">职位：</label>
                           <input type="text" name="positionName" class="form-control" value="${employee.positionName}" readonly="false" />
                         </div>
                         <div class="form-group">

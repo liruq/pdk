@@ -62,7 +62,7 @@
             <ul class="dropdown-menu dropdown-menu-default">
               <li>
                 <a href="sm/sm_employee_detail/${user.id}?funcActiveCode=USER&canEdit=true" >
-                  <i class="icon-settings"></i> 设置 </a>
+                  <i class="icon-settings"></i>个人信息 </a>
               </li>
               <li>
                 <a data-toggle="modal" data-target="#modifyPasswordDialog">

@@ -14,7 +14,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
@@ -89,13 +88,13 @@ public class SmEmployeeDetailAction {
 
         Map<String, Object> result = new HashMap<>();
 
-        if (errors.getErrorCount() > 0) {
-            result.put("result", "error");
-            for (FieldError err : errors.getFieldErrors()) {
-                map.put("err_" + err.getField(), err.getDefaultMessage());
-            }
-            return result;
-        }
+//        if (errors.getErrorCount() > 0) {
+//            result.put("result", "error");
+//            for (FieldError err : errors.getFieldErrors()) {
+//                map.put("err_" + err.getField(), err.getDefaultMessage());
+//            }
+//            return result;
+//        }
 
         if (isCodeRepeat(employee)) {
             result.put("result", "error");
