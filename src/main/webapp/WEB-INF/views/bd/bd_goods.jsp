@@ -173,16 +173,16 @@
             </div>
             <div class="form-group">
               <label class="control-label">商品价格：</label>
-              <input type="text" name="name" class="form-control" maxlength="50" placeholder="请输入商品名称" />
+              <input type="text" name="price" class="form-control" maxlength="50" placeholder="请输入商品名称" />
             </div>
             <div class="form-group">
               <label class="control-label ">商品种类：</label>
               <div class="input-group">
-                <input type="hidden" id="goodstypeId" name="goodstypeId" class="form-control" />
+                <input type="hidden" id="goodstype_id" name="goodstype_id" class="form-control" />
                 <input type="text" id="goodstypeName" name="goodstypeName" class="form-control" onclick="$('#goodsTypeDialog').modal('show');" placeholder="" readonly/>
                 <span class="input-group-btn">
                 <button class="btn btn-default" type="button" data-toggle="modal" data-target="#goodsTypeDialog"><i class="fa fa-search"></i></button>
-                <button class="btn btn-default" type="button" onclick="$('#goodstypeId').val(null);$('#goodstypeName').val(null)"><i class="fa fa-remove"></i></button>
+                <button class="btn btn-default" type="button" onclick="$('#goodstype_id').val(null);$('#goodstypeName').val(null)"><i class="fa fa-remove"></i></button>
                 </span>
               </div>
 

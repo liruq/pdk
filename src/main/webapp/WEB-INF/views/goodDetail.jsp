@@ -41,7 +41,7 @@ String resourcePath = request.getServletContext().getInitParameter("resource_pat
 				</div>
 				<div class="good-left" style="height: 50px;">&nbsp;</div>
 
-				<div class="good-buy-btn j_buy_btn">购买</div>
+				<div class="good-buy-btn j_buy_btn" id="buy">购买</div>
 				<div class="good-information">
 					<div class="title">商品详情</div>
 					<div class="sentence">
@@ -60,5 +60,22 @@ String resourcePath = request.getServletContext().getInitParameter("resource_pat
 	</div>
 </div>
 </body>
+<script src="<%=resourcePath%>static/global/plugins/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(document).ready(function(){
+		$("#buy").click(function(){
+			$.post("<%=basePath%>bd/buy",
+					{
+						id:${good.id},
+					},
+					function(data){
+						if(data=='success') {
+							alert("购买成功");
+						}else {window.open("<%=basePath%>/signIn")}
+					});
+		});
+	});
+</script>
+
 </html>
 

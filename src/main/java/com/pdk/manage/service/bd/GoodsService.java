@@ -58,7 +58,7 @@ public class GoodsService  extends BaseService<Goods> {
 
     public PageInfo<Goods> mySelectLikePage(String searchText, int pageNum, int pageSize, String orderBy, HttpServletRequest request) {
         PageInfo<Goods> goodsPageInfo = null;
-        PageHelper.startPage(pageNum, pageSize, orderBy);
+
 //        if (StringUtils.isEmpty(searchText)) {
 //            goodsPageInfo = new PageInfo<>(getDao().mySelect());
 //        } else {
@@ -66,8 +66,10 @@ public class GoodsService  extends BaseService<Goods> {
 //        }
         Employee employee = (Employee) request.getSession().getAttribute("user");
         if (employee.getPosition().getName().equals("管理员")) {
+            PageHelper.startPage(pageNum, pageSize, orderBy);
             goodsPageInfo = new PageInfo<>(getDao().mySelect());
         } else {
+            PageHelper.startPage(pageNum, pageSize, "a.code asc");
             goodsPageInfo = new PageInfo<>(getDao().queryByUser(employee.getId()));
         }
         return goodsPageInfo;
@@ -85,4 +87,9 @@ public class GoodsService  extends BaseService<Goods> {
     public Goods querybyId(String id) {
         return getDao().querybyId(id);
     }
+
+    public boolean buy(String id,String buyer){
+        return getDao().buy(id,buyer);
+    }
+
 }

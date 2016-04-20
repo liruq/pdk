@@ -70,14 +70,14 @@ public class SmEmployeeDetailAction {
     }
 
     private boolean hasPermession() {
-        List<FuncDto> permissionFuncs = (List<FuncDto>) session.getAttribute(CommonConst.SESSION_ATTR_KEY_PERMISSION_FUNCS);
-        for (FuncDto func : permissionFuncs) {
-            for ( FuncDto chldFunc : func.getChildren() ) {
-                if ("USER".equals(chldFunc.getCode())) {
-                    return true;
-                }
-            }
-        }
+//        List<FuncDto> permissionFuncs = (List<FuncDto>) session.getAttribute(CommonConst.SESSION_ATTR_KEY_PERMISSION_FUNCS);
+//        for (FuncDto func : permissionFuncs) {
+//            for ( FuncDto chldFunc : func.getChildren() ) {
+//                if ("USER".equals(chldFunc.getCode())) {
+//                    return true;
+//                }
+//            }
+//        }
 
         return false;
     }

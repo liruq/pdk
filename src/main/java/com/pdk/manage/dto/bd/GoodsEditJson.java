@@ -5,7 +5,7 @@ import com.pdk.manage.model.bd.Goods;
 import java.util.Date;
 
 /**
- * Created by liangyh on 2015/8/26.
+ * Created by liangyh on 2015/8/26
  */
 public class GoodsEditJson {
 

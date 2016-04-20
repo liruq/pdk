@@ -17,7 +17,7 @@
 <head>
   <base href="<%=basePath%>">
   <meta charset="utf-8"/>
-  <title后台管理系统-商品种类</title>
+  <title>后台管理系统-商品种类</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">

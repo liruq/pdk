@@ -54,6 +54,7 @@
 
         <div class="form-group">
             <button type="submit" data-loading-text="登录中..." class="btn btn-block btn-lg btn-login">登录</button>
+            <button onClick="location='<%=resourcePath%>signIn'" class="btn btn-block btn-lg btn-login">注册</button>
         </div>
 
     </form>

@@ -32,4 +32,8 @@ public class GoodsTypeService extends BaseService<GoodsType> {
     public boolean isRefrence(List<String> goodsTypeIds) {
         return goodsDao.refrencedCountSelect(goodsTypeIds, GoodsType.class.getName()) > 0;
     }
+
+    public GoodsType getByName(String goodsTypeName) {
+        return goodsDao.getGoodTypeByName(goodsTypeName);
+    }
 }

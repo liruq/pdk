@@ -8,7 +8,7 @@ import org.apache.ibatis.mapping.MappedStatement;
 import java.util.List;
 
 /**
- * Created by liuhaiming on 2015/8/27.
+ *
  */
 public interface BusinessLogicMapper<T> {
     @SelectProvider(type = BusinessLogicMapperProvider.class, method = "dynamicSQL")

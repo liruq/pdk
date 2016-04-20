@@ -5,9 +5,7 @@ import com.pdk.manage.exception.BusinessException;
 import com.pdk.manage.model.coupon.Coupon;
 import com.pdk.manage.model.coupon.CouponUserRelation;
 import com.pdk.manage.model.sm.User;
-import org.apache.commons.configuration.web.AppletConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

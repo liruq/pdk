@@ -51,7 +51,7 @@ String resourcePath = request.getServletContext().getInitParameter("resource_pat
 	<h1 class="fh5co-logo"><a class="navbar-brand" href="index.html">二手市场</a></h1>
 	<ul>
 		<li><a href="index.html">登录</a></li>
-		<li><a href="sign">注册</a></li>
+		<li><a href="<%=resourcePath%>signIn">注册</a></li>
 	</ul>
 	<h3 class="fh5co-lead">Connect with us</h3>
 	<p class="fh5co-social-icons">
