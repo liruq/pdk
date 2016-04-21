@@ -176,13 +176,7 @@
               <label class="control-label">商品价格：</label>
               <input type="text" name="price" class="form-control" maxlength="50" placeholder="请输入商品名称" />
             </div>
-            <div class="form-group">
-              <label class="control-label">商品图片：</label>
-              <%--<input type="file" name="img" class="form-control" id="file"/>--%>
-              <p><input type="file" id="file1" name="imageFile" /></p>
-              <input type="button" value="上传" />
-              <p><img id="img1" alt="上传成功啦" src="" /></p>
-            </div>
+
             <div class="form-group">
               <label class="control-label ">商品种类：</label>
               <div class="input-group">
@@ -193,8 +187,6 @@
                 <button class="btn btn-default" type="button" onclick="$('#goodstype_id').val(null);$('#goodstypeName').val(null)"><i class="fa fa-remove"></i></button>
                 </span>
               </div>
-
-
             </div>
 
             <div class="form-group">
@@ -204,13 +196,21 @@
                 <option value="1">禁用</option>
               </select>
             </div>
+
+            <div class="form-group">
+              <label class="control-label">商品图片：</label>
+              <input type="text" name="file" id="file" style="display: none"/>
+              <p><input type="file" id="file1" name="imageFile" /></p>
+              <input type="button" value="上传" />
+              <p><img id="img1" alt="" src="" style="width: 300px;"/></p>
+            </div>
+
             <div class="form-group">
               <label class="control-label">备注：</label>
               <textarea type="text" id="memo" name="memo" class="form-control" style="max-width:100%;" rows=3 placeholder="" ></textarea>
             </div>
           </form>
           <div class="modal-footer">
-            <button id="fileButton" onclick="upload();">上传图片</button>
             <button type="button" class="btn btn-primary" onclick="save()">保存</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
           </div>
@@ -338,14 +338,14 @@
             {
               url: 'http://localhost:8080/img/goodsUpload', //用于文件上传的服务器端请求地址
               type: 'post',
-
               secureuri: false, //一般设置为false
               fileElementId: 'file1', //文件上传空间的id属性  <input type="file" id="file" name="file" />
               dataType: 'json', //返回值类型 一般设置为json
               success: function (data, status)  //服务器成功响应处理函数
               {
                 alert(data.name);
-                $("#img1").attr("src", data.name);
+                $("#img1").attr("src", '<%=resourcePath%>static/img/'+data.name);
+                $("#file").val(data.name);
               },
               error:function(data,status){
                 alert(data);
@@ -370,19 +370,7 @@
     $("#status").select2({minimumResultsForSearch: -1});
   });
 </script>
-<%--<script>--%>
-    <%--function upload() {--%>
-      <%--$.post("<%=basePath%>img/goodsUpload",--%>
-              <%--{--%>
-                <%--imageFile: $("#file").val()--%>
-              <%--},--%>
-              <%--function (data) {--%>
-                <%--$("#file").val(data);--%>
-                <%--alert("上传成功");--%>
-              <%--});--%>
-    <%--};--%>
-<%--</script>--%>
-<!-- END JAVASCRIPTS -->
+
 </body>
 
 <!-- END BODY -->

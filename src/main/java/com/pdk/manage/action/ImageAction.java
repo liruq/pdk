@@ -2,6 +2,7 @@ package com.pdk.manage.action;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.pdk.manage.util.*;
 import org.apache.http.HttpEntity;
@@ -136,7 +137,8 @@ public class ImageAction {
             log.error(e.getMessage(), e);
         }
         try {
-            String s=new Gson().toJson(result);
+            ObjectMapper mapper = new ObjectMapper();
+            String s=mapper.writeValueAsString(result);
             System.out.println(s);
             response.getOutputStream().write(s.getBytes());
         } catch (IOException e) {

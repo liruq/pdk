@@ -1,4 +1,5 @@
 import com.pdk.manage.service.bd.GoodsService;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -18,9 +19,9 @@ public class AppleTest {
     @Resource
     GoodsService goodsService;
 
-//	@Test
-//	public void test() throws Exception {
-//		goodsService.
-//	}
+	@Test
+	public void test() throws Exception {
+		goodsService.qryGoodsById("dfdfd");
+	}
 
 }
