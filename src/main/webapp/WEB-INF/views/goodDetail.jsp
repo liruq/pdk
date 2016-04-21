@@ -66,7 +66,7 @@ String resourcePath = request.getServletContext().getInitParameter("resource_pat
 		$("#buy").click(function(){
 			$.post("<%=basePath%>bd/buy",
 					{
-						id:${good.id},
+						id:'${good.id}',
 					},
 					function(data){
 						if(data=='success') {
