@@ -319,7 +319,7 @@
 <script src="<%=resourcePath%>static/admin/js/bd/bd_goods_type_ref.js" type="text/javascript" charset="utf-8"></script>
 
 <script src="<%=resourcePath%>static/admin/js/common/common-tools.js" type="text/javascript" charset="utf-8"></script>
-<script src="http://apps.bdimg.com/libs/jquery/1.2.3/jquery.js" type="text/javascript"></script>
+<%--<script src="http://apps.bdimg.com/libs/jquery/1.2.3/jquery.js" type="text/javascript"></script>--%>
 <script src="<%=resourcePath%>static/js/ajaxfileupload.js" type="text/javascript"></script>
 <script type="text/javascript">
   $(function () {
