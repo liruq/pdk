@@ -71,6 +71,7 @@ public class GoodsAction {
         if (StringUtils.isNotBlank(goodstypeName)) {
             goods.setGoodstype_id(goodsTypeService.getByName(goodstypeName).getId());
         }
+        goods.setImg(String.format("static\\img\\%s",goods.getImg()));
         Employee employee= (Employee) request.getSession().getAttribute("user");
         goods.setUser(employee.getId());
         if (errors.getErrorCount() > 0) {

@@ -199,9 +199,9 @@
 
             <div class="form-group">
               <label class="control-label">商品图片：</label>
-              <input type="text" name="file" id="file" style="display: none"/>
+              <input type="text" name="img" id="file" style="display: none"/>
               <p><input type="file" id="file1" name="imageFile" /></p>
-              <input type="button" value="上传" />
+              <input type="button" id="mybutton" value="上传" />
               <p><img id="img1" alt="" src="" style="width: 300px;"/></p>
             </div>
 
@@ -323,7 +323,7 @@
 <script src="<%=resourcePath%>static/js/ajaxfileupload.js" type="text/javascript"></script>
 <script type="text/javascript">
   $(function () {
-    $(":button").click(function () {
+    $("#mybutton").click(function () {
       if ($("#file1").val().length > 0) {
         ajaxFileUpload();
       }
@@ -343,7 +343,6 @@
               dataType: 'json', //返回值类型 一般设置为json
               success: function (data, status)  //服务器成功响应处理函数
               {
-                alert(data.name);
                 $("#img1").attr("src", '<%=resourcePath%>static/img/'+data.name);
                 $("#file").val(data.name);
               },
