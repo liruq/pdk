@@ -2,6 +2,7 @@ package com.pdk.manage.action;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.google.gson.Gson;
 import com.pdk.manage.util.*;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -14,10 +15,14 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -31,6 +36,9 @@ import java.util.Map;
 @RequestMapping("/img")
 public class ImageAction {
     private static Logger log = LoggerFactory.getLogger(ImageAction.class);
+
+    @Resource
+    Environment environment;
 
     @RequestMapping(value="/img_upload/{employeeId}", method = RequestMethod.POST)
     @ResponseBody
@@ -107,21 +115,19 @@ public class ImageAction {
      * @return
      */
     @RequestMapping(value="/goodsUpload" ,method = RequestMethod.POST)
-    @ResponseBody
-    public Map<String,Object> uploadGoodsImg(@RequestParam(value="imageFile", required = false) MultipartFile file){
+    public void uploadGoodsImg(@RequestParam(value="imageFile", required = false) MultipartFile file, HttpServletRequest request, HttpServletResponse response){
         Map<String, Object> result = new HashMap<>();
         String orgnFileName = file.getOriginalFilename();
         String ext = orgnFileName.substring(orgnFileName.lastIndexOf("."));
         String fileName = UUIDGenerator.generateUUID() + ext;
-
-        String path = CommonUtil.getRealPath("static/head_img/goods_img");
-
+        response.setContentType("text/html;charset=UTF-8");
+//        String path = CommonUtil.getRealPath("static/img");
+        String path= request.getSession().getServletContext().getRealPath("/static/img");
         File folder = new File(path);
         File targetFile = new File(path, fileName);
         if ( !folder.exists() ) {
             folder.mkdirs();
         }
-
         try {
             file.transferTo(targetFile);
             result.put("name",targetFile.getName());
@@ -129,8 +135,13 @@ public class ImageAction {
         } catch (Exception e) {
             log.error(e.getMessage(), e);
         }
-
-        return result;
+        try {
+            String s=new Gson().toJson(result);
+            System.out.println(s);
+            response.getOutputStream().write(s.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

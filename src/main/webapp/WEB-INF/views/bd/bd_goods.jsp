@@ -47,6 +47,7 @@
   <link href="<%=resourcePath%>static/admin/css/index.css" rel="stylesheet" type="text/css"/>
   <!-- END THEME STYLES -->
   <link href="<%=resourcePath%>static/img/logo.ico" rel="shortcut icon"/>
+
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -176,6 +177,13 @@
               <input type="text" name="price" class="form-control" maxlength="50" placeholder="请输入商品名称" />
             </div>
             <div class="form-group">
+              <label class="control-label">商品图片：</label>
+              <%--<input type="file" name="img" class="form-control" id="file"/>--%>
+              <p><input type="file" id="file1" name="imageFile" /></p>
+              <input type="button" value="上传" />
+              <p><img id="img1" alt="上传成功啦" src="" /></p>
+            </div>
+            <div class="form-group">
               <label class="control-label ">商品种类：</label>
               <div class="input-group">
                 <input type="hidden" id="goodstype_id" name="goodstype_id" class="form-control" />
@@ -202,6 +210,7 @@
             </div>
           </form>
           <div class="modal-footer">
+            <button id="fileButton" onclick="upload();">上传图片</button>
             <button type="button" class="btn btn-primary" onclick="save()">保存</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
           </div>
@@ -310,7 +319,42 @@
 <script src="<%=resourcePath%>static/admin/js/bd/bd_goods_type_ref.js" type="text/javascript" charset="utf-8"></script>
 
 <script src="<%=resourcePath%>static/admin/js/common/common-tools.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://apps.bdimg.com/libs/jquery/1.2.3/jquery.js" type="text/javascript"></script>
+<script src="<%=resourcePath%>static/js/ajaxfileupload.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function () {
+    $(":button").click(function () {
+      if ($("#file1").val().length > 0) {
+        ajaxFileUpload();
+      }
+      else {
+        alert("请选择图片");
+      }
+    })
+  })
+  function ajaxFileUpload() {
+    $.ajaxFileUpload
+    (
+            {
+              url: 'http://localhost:8080/img/goodsUpload', //用于文件上传的服务器端请求地址
+              type: 'post',
 
+              secureuri: false, //一般设置为false
+              fileElementId: 'file1', //文件上传空间的id属性  <input type="file" id="file" name="file" />
+              dataType: 'json', //返回值类型 一般设置为json
+              success: function (data, status)  //服务器成功响应处理函数
+              {
+                alert(data.name);
+                $("#img1").attr("src", data.name);
+              },
+              error:function(data,status){
+                alert(data);
+              }
+            }
+    )
+    return false;
+  }
+</script>
 <script>
   jQuery(document).ready(function () {
     loadInboxMsg();
@@ -326,6 +370,18 @@
     $("#status").select2({minimumResultsForSearch: -1});
   });
 </script>
+<%--<script>--%>
+    <%--function upload() {--%>
+      <%--$.post("<%=basePath%>img/goodsUpload",--%>
+              <%--{--%>
+                <%--imageFile: $("#file").val()--%>
+              <%--},--%>
+              <%--function (data) {--%>
+                <%--$("#file").val(data);--%>
+                <%--alert("上传成功");--%>
+              <%--});--%>
+    <%--};--%>
+<%--</script>--%>
 <!-- END JAVASCRIPTS -->
 </body>
 
