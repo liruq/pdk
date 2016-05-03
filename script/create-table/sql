@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Server version:               5.7.11-log - MySQL Community Server (GPL)
--- Server OS:                    Win64
--- HeidiSQL Version:             9.3.0.4984
+-- 主机:                           127.0.0.1
+-- 服务器版本:                        5.7.11-log - MySQL Community Server (GPL)
+-- 服务器操作系统:                      Win64
+-- HeidiSQL 版本:                  9.3.0.4984
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -10,8 +10,7 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Dumping structure for table book.pdk_bd_goods
-DROP TABLE IF EXISTS `pdk_bd_goods`;
+-- 导出  表 book.pdk_bd_goods 结构
 CREATE TABLE IF NOT EXISTS `pdk_bd_goods` (
   `id` char(24) NOT NULL,
   `code` varchar(20) DEFAULT NULL,
@@ -28,18 +27,17 @@ CREATE TABLE IF NOT EXISTS `pdk_bd_goods` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table book.pdk_bd_goods: 2 rows
+-- 正在导出表  book.pdk_bd_goods 的数据：4 rows
 /*!40000 ALTER TABLE `pdk_bd_goods` DISABLE KEYS */;
 INSERT INTO `pdk_bd_goods` (`id`, `code`, `name`, `goodstype_id`, `status`, `memo`, `ts`, `dr`, `price`, `user`, `img`, `buyer`) VALUES
-	('2324', '数据结构', '数据结构', '0001BD201604201512200000', 0, '数据结构是计算机存储、组织数据的方式。数据结构是指相互之间存在一种或多种特定关系的数据元素的集合。通常情况下，精心选择的数据结构可以带来更高的运行或者存储效率。数据结构往往同高效的检索算法和索引技术有关。', '2016-04-20 15:14:08', 0, 87, '0001SM201604201528070000', 'static\\img\\2.gif', 'aa'),
-	('342', '吉他', '吉他', '0001BD201604201514400000', 0, '1、古典吉他 \r\n出自宫廷乐器，据说是鲁特琴的衍生乐器。琴身系手工打造，指板平、宽。琴弦是尼龙弦，上弦方式特殊。音色唯美、圆润。  \r\n2、民谣吉他 \r\n来自古典吉他，变更为12～14品的大共鸣箱吉他，微窄的指板和略有弧度的指板面使演奏更加轻松。琴弦都为钢、合金弦，较硬。音色清脆悦耳，穿透力强，音量大于古典琴，金属感厚重。', '2016-04-20 15:15:49', 0, 99, '0001SM201604201528070000', 'static\\img\\1.jpg', '0001SM201508221906530000'),
-	('0001BD201604201736560000', 'dfd', 'fdsfs', '0001BD201604201514400000', 0, 'asdfsdfasdasdfasdf', '2016-04-20 17:58:32', 0, 12, NULL, NULL, NULL),
-	('0001BD201604201742170000', 'sdfsfd', 'sdfasd', '0001BD201604201514400000', 0, '', '2016-04-20 17:42:17', 0, 2123231, NULL, NULL, NULL);
+	('2324', '数据结构', '数据结构', '0001BD201604201512200000', 0, '数据结构是计算机存储、组织数据的方式。数据结构是指相互之间存在一种或多种特定关系的数据元素的集合。通常情况下，精心选择的数据结构可以带来更高的运行或者存储效率。数据结构往往同高效的检索算法和索引技术有关。', '2016-04-20 15:14:08', 0, 87, '0001SM201604201528070000', 'static\\img\\2.jpg', '0001SM201508221906530000'),
+	('342', '吉他', '吉他', '0001BD201604201514400000', 0, '1、古典吉他 \r\n出自宫廷乐器，据说是鲁特琴的衍生乐器。琴身系手工打造，指板平、宽。琴弦是尼龙弦，上弦方式特殊。音色唯美、圆润。  \r\n2、民谣吉他 \r\n来自古典吉他，变更为12～14品的大共鸣箱吉他，微窄的指板和略有弧度的指板面使演奏更加轻松。琴弦都为钢、合金弦，较硬。音色清脆悦耳，穿透力强，音量大于古典琴，金属感厚重。', '2016-04-20 15:15:49', 0, 99, '0001SM201604201528070000', 'static\\img\\1.jpg', '0001SM201604201528070000'),
+	('0001BD201604212034340000', 'yyyyy', 'yyyyy', '0001BD201604201512200000', 0, 'aaaaaa', '2016-04-21 20:34:34', 0, 14234, '0001SM201508221906530000', 'static\\img\\c599886b96c14b2087bfde6dd6f94163.jpg', '0001SM201508221906530000'),
+	('201604212332190000', '4', '单反', '0001BD201604201514400000', 0, '个人喜欢的相机', '2016-04-21 23:32:19', 0, 3500, '0001SM201508221906530000', 'static\\img\\', '0001SM201508221906530000');
 /*!40000 ALTER TABLE `pdk_bd_goods` ENABLE KEYS */;
 
 
--- Dumping structure for table book.pdk_bd_goodstype
-DROP TABLE IF EXISTS `pdk_bd_goodstype`;
+-- 导出  表 book.pdk_bd_goodstype 结构
 CREATE TABLE IF NOT EXISTS `pdk_bd_goodstype` (
   `id` char(24) NOT NULL,
   `code` varchar(20) DEFAULT NULL,
@@ -51,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `pdk_bd_goodstype` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table book.pdk_bd_goodstype: 2 rows
+-- 正在导出表  book.pdk_bd_goodstype 的数据：2 rows
 /*!40000 ALTER TABLE `pdk_bd_goodstype` DISABLE KEYS */;
 INSERT INTO `pdk_bd_goodstype` (`id`, `code`, `name`, `status`, `memo`, `ts`, `dr`) VALUES
 	('0001BD201604201512200000', '书本', '书本', 0, '', '2016-04-20 15:14:50', 0),
@@ -59,8 +57,7 @@ INSERT INTO `pdk_bd_goodstype` (`id`, `code`, `name`, `status`, `memo`, `ts`, `d
 /*!40000 ALTER TABLE `pdk_bd_goodstype` ENABLE KEYS */;
 
 
--- Dumping structure for table book.pdk_bd_position
-DROP TABLE IF EXISTS `pdk_bd_position`;
+-- 导出  表 book.pdk_bd_position 结构
 CREATE TABLE IF NOT EXISTS `pdk_bd_position` (
   `id` char(20) NOT NULL,
   `code` varchar(10) DEFAULT NULL,
@@ -70,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `pdk_bd_position` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table book.pdk_bd_position: ~2 rows (approximately)
+-- 正在导出表  book.pdk_bd_position 的数据：~2 rows (大约)
 /*!40000 ALTER TABLE `pdk_bd_position` DISABLE KEYS */;
 INSERT INTO `pdk_bd_position` (`id`, `code`, `name`, `ts`, `dr`) VALUES
 	('PDKPREDATA0000000001', '01', '管理员', '2015-08-28 19:06:53', 0),
@@ -78,8 +75,7 @@ INSERT INTO `pdk_bd_position` (`id`, `code`, `name`, `ts`, `dr`) VALUES
 /*!40000 ALTER TABLE `pdk_bd_position` ENABLE KEYS */;
 
 
--- Dumping structure for table book.pdk_bd_shop
-DROP TABLE IF EXISTS `pdk_bd_shop`;
+-- 导出  表 book.pdk_bd_shop 结构
 CREATE TABLE IF NOT EXISTS `pdk_bd_shop` (
   `id` char(24) NOT NULL,
   `code` varchar(20) DEFAULT NULL,
@@ -92,13 +88,12 @@ CREATE TABLE IF NOT EXISTS `pdk_bd_shop` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table book.pdk_bd_shop: 0 rows
+-- 正在导出表  book.pdk_bd_shop 的数据：0 rows
 /*!40000 ALTER TABLE `pdk_bd_shop` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pdk_bd_shop` ENABLE KEYS */;
 
 
--- Dumping structure for table book.pdk_bd_unit
-DROP TABLE IF EXISTS `pdk_bd_unit`;
+-- 导出  表 book.pdk_bd_unit 结构
 CREATE TABLE IF NOT EXISTS `pdk_bd_unit` (
   `id` char(24) NOT NULL,
   `code` varchar(20) DEFAULT NULL,
@@ -110,13 +105,12 @@ CREATE TABLE IF NOT EXISTS `pdk_bd_unit` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table book.pdk_bd_unit: ~0 rows (approximately)
+-- 正在导出表  book.pdk_bd_unit 的数据：~0 rows (大约)
 /*!40000 ALTER TABLE `pdk_bd_unit` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pdk_bd_unit` ENABLE KEYS */;
 
 
--- Dumping structure for table book.pdk_chat_chatmsg
-DROP TABLE IF EXISTS `pdk_chat_chatmsg`;
+-- 导出  表 book.pdk_chat_chatmsg 结构
 CREATE TABLE IF NOT EXISTS `pdk_chat_chatmsg` (
   `id` char(24) NOT NULL,
   `from_id` char(24) DEFAULT NULL,
@@ -136,13 +130,12 @@ CREATE TABLE IF NOT EXISTS `pdk_chat_chatmsg` (
   KEY `I_chat_chatmsg_2` (`send_to_id`) USING BTREE
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table book.pdk_chat_chatmsg: 0 rows
+-- 正在导出表  book.pdk_chat_chatmsg 的数据：0 rows
 /*!40000 ALTER TABLE `pdk_chat_chatmsg` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pdk_chat_chatmsg` ENABLE KEYS */;
 
 
--- Dumping structure for table book.pdk_sm_employee
-DROP TABLE IF EXISTS `pdk_sm_employee`;
+-- 导出  表 book.pdk_sm_employee 结构
 CREATE TABLE IF NOT EXISTS `pdk_sm_employee` (
   `id` char(24) NOT NULL,
   `code` varchar(20) DEFAULT NULL,
@@ -162,18 +155,54 @@ CREATE TABLE IF NOT EXISTS `pdk_sm_employee` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table book.pdk_sm_employee: 4 rows
+-- 正在导出表  book.pdk_sm_employee 的数据：6 rows
 /*!40000 ALTER TABLE `pdk_sm_employee` DISABLE KEYS */;
 INSERT INTO `pdk_sm_employee` (`id`, `code`, `name`, `org_id`, `role_id`, `sex`, `id_card`, `phone`, `password`, `header_img`, `status`, `memo`, `ts`, `dr`, `position_id`) VALUES
 	('0001SM201508221906530000', 'admin', '系统预置管理员', 'root', '0001SM201508061838240001', 1, '', '', '202cb962ac59075b964b07152d234b70', NULL, 0, '', '2016-04-20 15:00:06', 0, 'PDKPREDATA0000000001'),
 	('0001SM201604201528070000', '用户1', '用户1', 'root', '0001SM201510211758150000', 1, '', '', 'c4ca4238a0b923820dcc509a6f75849b', NULL, 0, '', '2016-04-20 15:28:07', 0, 'PDKPREDATA0000000002'),
 	('0001SM201604201642500000', '用户2', '用户2', NULL, '0001SM201510211758150000', 1, '', '', 'c4ca4238a0b923820dcc509a6f75849b', NULL, 0, '', '2016-04-20 16:58:59', 0, 'PDKPREDATA0000000002'),
-	('0001SM201604201657450000', '用户3', '用户3', NULL, '0001SM201510211758150000', 2, '', '', 'c4ca4238a0b923820dcc509a6f75849b', NULL, 0, '', '2016-04-20 16:57:45', 0, 'PDKPREDATA0000000002');
+	('0001SM201604201657450000', '用户3', '用户3', NULL, '0001SM201510211758150000', 2, '', '', 'c4ca4238a0b923820dcc509a6f75849b', NULL, 0, '', '2016-04-20 16:57:45', 0, 'PDKPREDATA0000000002'),
+	('0001SM201604202204490000', 'wrqwer', 'ere', NULL, NULL, 1, '', '', 'c4ca4238a0b923820dcc509a6f75849b', NULL, 0, '', '2016-04-20 22:04:49', 1, NULL),
+	('0001SM201604202207200000', 'fdsfds', 'fsdfse', NULL, NULL, 1, '', '', 'c4ca4238a0b923820dcc509a6f75849b', NULL, 0, '', '2016-04-20 22:07:20', 1, NULL);
 /*!40000 ALTER TABLE `pdk_sm_employee` ENABLE KEYS */;
 
 
--- Dumping structure for table book.pdk_sm_file
-DROP TABLE IF EXISTS `pdk_sm_file`;
+-- 导出  表 book.pdk_sm_employee_auxiliary 结构
+CREATE TABLE IF NOT EXISTS `pdk_sm_employee_auxiliary` (
+  `id` char(24) NOT NULL,
+  `employee_id` char(24) DEFAULT NULL,
+  `role_id` char(24) DEFAULT NULL,
+  `ts` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `dr` smallint(6) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  book.pdk_sm_employee_auxiliary 的数据：~0 rows (大约)
+/*!40000 ALTER TABLE `pdk_sm_employee_auxiliary` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pdk_sm_employee_auxiliary` ENABLE KEYS */;
+
+
+-- 导出  表 book.pdk_sm_employee_review 结构
+CREATE TABLE IF NOT EXISTS `pdk_sm_employee_review` (
+  `id` char(24) NOT NULL,
+  `user_id` char(24) NOT NULL,
+  `source_id` varchar(50) NOT NULL,
+  `employee_id` char(24) NOT NULL,
+  `order_id` char(24) NOT NULL,
+  `score` int(11) DEFAULT NULL,
+  `description` varchar(400) DEFAULT NULL,
+  `ts` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `dr` smallint(6) DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `I_sm_e_review_1` (`order_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  book.pdk_sm_employee_review 的数据：~0 rows (大约)
+/*!40000 ALTER TABLE `pdk_sm_employee_review` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pdk_sm_employee_review` ENABLE KEYS */;
+
+
+-- 导出  表 book.pdk_sm_file 结构
 CREATE TABLE IF NOT EXISTS `pdk_sm_file` (
   `id` char(24) NOT NULL,
   `name` varchar(50) DEFAULT NULL,
@@ -189,13 +218,12 @@ CREATE TABLE IF NOT EXISTS `pdk_sm_file` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table book.pdk_sm_file: 0 rows
+-- 正在导出表  book.pdk_sm_file 的数据：0 rows
 /*!40000 ALTER TABLE `pdk_sm_file` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pdk_sm_file` ENABLE KEYS */;
 
 
--- Dumping structure for table book.pdk_sm_func
-DROP TABLE IF EXISTS `pdk_sm_func`;
+-- 导出  表 book.pdk_sm_func 结构
 CREATE TABLE IF NOT EXISTS `pdk_sm_func` (
   `id` char(24) NOT NULL,
   `code` varchar(20) DEFAULT NULL,
@@ -211,7 +239,7 @@ CREATE TABLE IF NOT EXISTS `pdk_sm_func` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table book.pdk_sm_func: 5 rows
+-- 正在导出表  book.pdk_sm_func 的数据：6 rows
 /*!40000 ALTER TABLE `pdk_sm_func` DISABLE KEYS */;
 INSERT INTO `pdk_sm_func` (`id`, `code`, `name`, `incode`, `href`, `icon`, `parent_id`, `status`, `ts`, `dr`, `sq`) VALUES
 	('0001SM201508081914350004', 'GOODS_TYPE', '商品种类', '1010', 'bd/bd_goodsType', 'icon-book-open', '', 0, '2015-08-09 00:00:00', 0, 10),
@@ -223,8 +251,7 @@ INSERT INTO `pdk_sm_func` (`id`, `code`, `name`, `incode`, `href`, `icon`, `pare
 /*!40000 ALTER TABLE `pdk_sm_func` ENABLE KEYS */;
 
 
--- Dumping structure for table book.pdk_sm_funcassign
-DROP TABLE IF EXISTS `pdk_sm_funcassign`;
+-- 导出  表 book.pdk_sm_funcassign 结构
 CREATE TABLE IF NOT EXISTS `pdk_sm_funcassign` (
   `id` char(24) NOT NULL,
   `func_id` char(24) NOT NULL,
@@ -234,13 +261,12 @@ CREATE TABLE IF NOT EXISTS `pdk_sm_funcassign` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table book.pdk_sm_funcassign: 0 rows
+-- 正在导出表  book.pdk_sm_funcassign 的数据：0 rows
 /*!40000 ALTER TABLE `pdk_sm_funcassign` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pdk_sm_funcassign` ENABLE KEYS */;
 
 
--- Dumping structure for table book.pdk_sm_org
-DROP TABLE IF EXISTS `pdk_sm_org`;
+-- 导出  表 book.pdk_sm_org 结构
 CREATE TABLE IF NOT EXISTS `pdk_sm_org` (
   `id` char(24) NOT NULL,
   `code` varchar(20) DEFAULT NULL,
@@ -256,13 +282,12 @@ CREATE TABLE IF NOT EXISTS `pdk_sm_org` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table book.pdk_sm_org: 0 rows
+-- 正在导出表  book.pdk_sm_org 的数据：0 rows
 /*!40000 ALTER TABLE `pdk_sm_org` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pdk_sm_org` ENABLE KEYS */;
 
 
--- Dumping structure for table book.pdk_sm_permission_func
-DROP TABLE IF EXISTS `pdk_sm_permission_func`;
+-- 导出  表 book.pdk_sm_permission_func 结构
 CREATE TABLE IF NOT EXISTS `pdk_sm_permission_func` (
   `id` char(24) NOT NULL,
   `role_id` char(24) DEFAULT NULL,
@@ -272,15 +297,15 @@ CREATE TABLE IF NOT EXISTS `pdk_sm_permission_func` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table book.pdk_sm_permission_func: 1 rows
+-- 正在导出表  book.pdk_sm_permission_func 的数据：2 rows
 /*!40000 ALTER TABLE `pdk_sm_permission_func` DISABLE KEYS */;
 INSERT INTO `pdk_sm_permission_func` (`id`, `role_id`, `func_id`, `ts`, `dr`) VALUES
-	('0001SM201604201526510000', '0001SM201510211758150000', '0001SM201508081914350005', '2016-04-20 15:26:51', 0);
+	('0001SM201604201526510000', '0001SM201510211758150000', '0001SM201508081914350005', '2016-04-20 15:26:51', 0),
+	('0001SM201604210021460000', '0001SM201510211758150000', '0001SM201508081914350006', '2016-04-21 00:21:46', 0);
 /*!40000 ALTER TABLE `pdk_sm_permission_func` ENABLE KEYS */;
 
 
--- Dumping structure for table book.pdk_sm_role
-DROP TABLE IF EXISTS `pdk_sm_role`;
+-- 导出  表 book.pdk_sm_role 结构
 CREATE TABLE IF NOT EXISTS `pdk_sm_role` (
   `id` char(24) NOT NULL,
   `code` varchar(20) DEFAULT NULL,
@@ -292,7 +317,7 @@ CREATE TABLE IF NOT EXISTS `pdk_sm_role` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table book.pdk_sm_role: 2 rows
+-- 正在导出表  book.pdk_sm_role 的数据：2 rows
 /*!40000 ALTER TABLE `pdk_sm_role` DISABLE KEYS */;
 INSERT INTO `pdk_sm_role` (`id`, `code`, `name`, `status`, `memo`, `ts`, `dr`) VALUES
 	('0001SM201508061838240001', 'admin', '管理员', 0, '系统内置管理员角色', '2015-08-22 00:00:48', 0),
@@ -300,8 +325,7 @@ INSERT INTO `pdk_sm_role` (`id`, `code`, `name`, `status`, `memo`, `ts`, `dr`) V
 /*!40000 ALTER TABLE `pdk_sm_role` ENABLE KEYS */;
 
 
--- Dumping structure for table book.pdk_sm_user
-DROP TABLE IF EXISTS `pdk_sm_user`;
+-- 导出  表 book.pdk_sm_user 结构
 CREATE TABLE IF NOT EXISTS `pdk_sm_user` (
   `id` char(24) NOT NULL,
   `name` varchar(50) CHARACTER SET utf8mb4 DEFAULT NULL,
@@ -324,7 +348,7 @@ CREATE TABLE IF NOT EXISTS `pdk_sm_user` (
   KEY `source_id` (`source_id`) USING BTREE
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table book.pdk_sm_user: 0 rows
+-- 正在导出表  book.pdk_sm_user 的数据：0 rows
 /*!40000 ALTER TABLE `pdk_sm_user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pdk_sm_user` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
