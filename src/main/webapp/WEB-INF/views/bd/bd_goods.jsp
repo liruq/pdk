@@ -320,6 +320,7 @@
     initGoodsTypeRefTable();
     setMenuItemActive("${requestScope.funcActiveCode}");
 
+
     $("#status").select2({minimumResultsForSearch: -1});
   });
 </script>
