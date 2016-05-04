@@ -1,9 +1,10 @@
 package com.erp.mapper;
 
 import com.erp.model.Inorder;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
-
+@Repository
 public interface InorderMapper {
     int deleteByPrimaryKey(Integer id);
 

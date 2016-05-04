@@ -1,7 +1,9 @@
 package com.erp.mapper;
 
 import com.erp.model.User;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UserMapper {
     int deleteByPrimaryKey(String account);
 

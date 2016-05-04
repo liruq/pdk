@@ -1,3 +1,5 @@
+import com.erp.model.User;
+import com.erp.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -13,10 +15,11 @@ import javax.annotation.Resource;
 @ContextConfiguration(locations={"classpath*:spring.xml"})
 public class MyTest {
     @Resource
-
+    UserService userService;
 
     @Test
     public void test(){
-
+        User user=userService.get("admin");
+        System.out.println(user.getPassword());
     }
 }

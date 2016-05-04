@@ -30,9 +30,6 @@
 			<property name="pageSizeZero" value="true"/>
 			<property name="reasonable" value="true"/>
 		</plugin>
-		<plugin interceptor="tk.mybatis.mapper.mapperhelper.MapperInterceptor">
-			<property name="mappers" value="com.pdk.manage.mapper.common.BaseDao,com.pdk.manage.mapper.common.BusinessLogicMapper" />
-		</plugin>
 	</plugins>
 
     <mappers>
