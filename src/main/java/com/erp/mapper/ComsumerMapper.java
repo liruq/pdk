@@ -1,0 +1,19 @@
+package com.erp.mapper;
+
+import com.erp.model.Comsumer;
+import org.springframework.stereotype.Service;
+
+
+public interface ComsumerMapper {
+    int deleteByPrimaryKey(Integer id);
+
+    int insert(Comsumer record);
+
+    int insertSelective(Comsumer record);
+
+    Comsumer selectByPrimaryKey(Integer id);
+
+    int updateByPrimaryKeySelective(Comsumer record);
+
+    int updateByPrimaryKey(Comsumer record);
+}

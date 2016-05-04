@@ -81,7 +81,7 @@
             <appender-ref ref="quartz"/>
         </logger>
 
-        <logger name="com.pdk.manage.dao" level="debug">
+        <logger name="com.pdk.manage.mapper" level="debug">
             <appender-ref ref="sql"/>
         </logger>
 

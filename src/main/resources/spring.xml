@@ -19,7 +19,7 @@
     <!--开启扫面注解生成Bean-->
     <context:annotation-config/>
     <!--设定扫描的根package-->
-    <context:component-scan base-package="com.pdk.manage">
+    <context:component-scan base-package="com.erp">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
         <context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice" />
     </context:component-scan>
@@ -27,7 +27,7 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <!--规定了扫描mapper文件的路径-->
-        <property name="mapperLocations" value="classpath*:dao/*/*.xml"/>
+        <property name="mapperLocations" value="classpath*:dao/*.xml"/>
         <!--指定了Mybatis配置文件的路径-->
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
         <!-- 别名的基本包 -->
@@ -40,7 +40,7 @@
 
     <!--这一段让我们的MapperInterface能够最终在Spring中生成Bean最后被AutoWired-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.pdk.manage.dao"/>
+        <property name="basePackage" value="com.erp"/>
     </bean>
 
 	<util:properties id="dbConfig" location="classpath:/jdbc.properties" />

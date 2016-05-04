@@ -44,10 +44,6 @@
         <param-value>true</param-value>
     </context-param>
 
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>classpath*:spring.xml,classpath*:quartz.xml</param-value>
-    </context-param>
 
     <servlet>
         <servlet-name>spring_mvc</servlet-name>

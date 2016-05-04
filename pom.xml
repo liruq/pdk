@@ -260,72 +260,6 @@
 			<artifactId>httpmime</artifactId>
 			<version>4.3.1</version>
 		</dependency>
-
-		<!-- 个推 start-->
-		<dependency>
-			<groupId>com.google.protobuf</groupId>
-			<artifactId>protobuf-java</artifactId>
-			<version>2.5.0</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/script/igetui/protobuf-java-2.5.0.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-all</artifactId>
-			<version>1.8.5</version>
-			<scope>system</scope>
-			<!--本地jar的路径,相对或者绝对都可以-->
-			<systemPath>${project.basedir}/script/igetui/jackson-all-1.8.5.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons.codec</groupId>
-			<artifactId>commons-codec</artifactId>
-			<version>1.2</version>
-			<scope>system</scope>
-			<!--本地jar的路径,相对或者绝对都可以-->
-			<systemPath>${project.basedir}/script/igetui/commons-codec-1.2.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons.configuration</groupId>
-			<artifactId>commons-configuration</artifactId>
-			<version>1.6</version>
-			<scope>system</scope>
-			<!--本地jar的路径,相对或者绝对都可以-->
-			<systemPath>${project.basedir}/script/igetui/commons-configuration-1.6.jar</systemPath>
-		</dependency>
-		<!--<dependency>-->
-		<!--<groupId>org.apache.commons.logging</groupId>-->
-		<!--<artifactId>commons-logging</artifactId>-->
-		<!--<version>1.0.3</version>-->
-		<!--<scope>system</scope>-->
-		<!--&lt;!&ndash;本地jar的路径,相对或者绝对都可以&ndash;&gt;-->
-		<!--<systemPath>${project.basedir}/script/igetui/commons-logging-1.0.3.jar</systemPath>-->
-		<!--</dependency>-->
-
-		<dependency>
-			<groupId>com.gexin.platform</groupId>
-			<artifactId>gexin-rp-sdk-base</artifactId>
-			<version>4.0.0.2</version>
-			<scope>system</scope>
-			<!--本地jar的路径,相对或者绝对都可以-->
-			<systemPath>${project.basedir}/script/igetui/gexin-rp-sdk-base-4.0.0.2.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.gexin.platform</groupId>
-			<artifactId>gexin-rp-sdk-http</artifactId>
-			<version>4.0.0.2</version>
-			<scope>system</scope>
-			<!--本地jar的路径,相对或者绝对都可以-->
-			<systemPath>${project.basedir}/script/igetui/gexin-rp-sdk-http-4.0.0.2.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.gexin.platform</groupId>
-			<artifactId>gexin-rp-sdk-template</artifactId>
-			<version>4.0.0.2</version>
-			<scope>system</scope>
-			<!--本地jar的路径,相对或者绝对都可以-->
-			<systemPath>${project.basedir}/script/igetui/gexin-rp-sdk-template-4.0.0.2.jar</systemPath>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -390,7 +324,7 @@
 			<!-- 开发环境 -->
 			<id>dev</id>
 			<properties>
-				<jdbc_url>jdbc:mysql://10.18.20.5:3306/test2?autoReconnect=true</jdbc_url>
+				<jdbc_url>jdbc:mysql://127.0.0.1:3306/erp?autoReconnect=true</jdbc_url>
 			</properties>
 			<!-- 默认激活本环境 -->
 			<activation>
@@ -402,7 +336,7 @@
 			<!-- 测试环境 -->
 			<id>test</id>
 			<properties>
-				<jdbc_url>jdbc:mysql://10.18.20.5:3306/test2?autoReconnect=true</jdbc_url>
+				<jdbc_url>jdbc:mysql://127.0.0.1:3306/erp?autoReconnect=true</jdbc_url>
 			</properties>
 		</profile>
 	</profiles>
