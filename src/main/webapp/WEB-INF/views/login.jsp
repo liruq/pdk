@@ -44,13 +44,7 @@
                 <input type="password" name="password" class="form-control" placeholder="密码">
             </div>
         </div>
-        <div class="form-group">
-            <div class="input-group input-group-lg">
-                <input type="text" name="validateCode" class="form-control" placeholder="验证码">
-                <span id="validate-code-addon" class="input-group-addon"><img src="img/validate_code" onclick="javascript:refreshValidateCode(this)"></span>
-            </div>
 
-        </div>
 
         <div class="form-group">
             <button type="submit" data-loading-text="登录中..." class="btn btn-block btn-lg btn-login">登录</button>

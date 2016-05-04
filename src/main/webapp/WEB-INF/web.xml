@@ -12,7 +12,7 @@
     
     <context-param>
         <param-name>resource_path</param-name>
-        <param-value>http://localhost:8081</param-value>
+        <param-value>http://localhost:8080</param-value>
         <!--<param-value>http://paodekuai.lifecreatech.com:8888</param-value>-->
     </context-param>
 
@@ -29,6 +29,11 @@
     <context-param>
         <param-name>chat_cs_websocket</param-name>
         <param-value>ws://zhenglizhe.lifecreatech.com/pdk-chat/websocket/cs</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath*:spring.xml</param-value>
     </context-param>
 
     <welcome-file-list>

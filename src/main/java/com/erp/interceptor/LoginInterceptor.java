@@ -16,7 +16,7 @@ public class LoginInterceptor  implements HandlerInterceptor{
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        Boolean isLogin =  (Boolean)request.getSession().getAttribute("isLogin");
+        Boolean isLogin =  (Boolean)request.getSession().getAttribute("login");
 
         if(isLogin == null || !isLogin){
             log.info("没有登录,直接跳转登录页面");
