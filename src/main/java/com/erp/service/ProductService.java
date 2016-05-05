@@ -17,6 +17,9 @@ public class ProductService {
     @Resource
     ProductMapper productMapper;
 
+    public int getCount(int id){
+        return productMapper.selectByPrimaryKey(id).getCount();
+    }
 
     public boolean inOrderAdd(Inorder inorder, HttpServletRequest request) {
         Integer productId = getProductId(inorder.getProductName());
@@ -32,6 +35,10 @@ public class ProductService {
         inorder.setOperateUserAccount(user);
         inorderMapper.insertSelective(inorder);
         return true;
+    }
+
+    public int changeCount(int count,int id){
+        return productMapper.changeCount(count,id);
     }
 
 

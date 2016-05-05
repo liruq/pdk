@@ -13,8 +13,6 @@ public class Order {
 
     private String brokerage;
 
-    private Integer operateUserId;
-
     private String expressCom;
 
     private Integer expressNum;
@@ -23,7 +21,19 @@ public class Order {
 
     private String confirmTime;
 
-    private Byte tpye;
+    private byte tpye;
+
+    private String operateUserAccount;
+
+    private String productName;
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
 
     public Integer getId() {
         return id;
@@ -73,14 +83,6 @@ public class Order {
         this.brokerage = brokerage == null ? null : brokerage.trim();
     }
 
-    public Integer getOperateUserId() {
-        return operateUserId;
-    }
-
-    public void setOperateUserId(Integer operateUserId) {
-        this.operateUserId = operateUserId;
-    }
-
     public String getExpressCom() {
         return expressCom;
     }
@@ -113,11 +115,19 @@ public class Order {
         this.confirmTime = confirmTime == null ? null : confirmTime.trim();
     }
 
-    public Byte getTpye() {
+    public byte getTpye() {
         return tpye;
     }
 
-    public void setTpye(Byte tpye) {
+    public void setTpye(byte tpye) {
         this.tpye = tpye;
+    }
+
+    public String getOperateUserAccount() {
+        return operateUserAccount;
+    }
+
+    public void setOperateUserAccount(String operateUserAccount) {
+        this.operateUserAccount = operateUserAccount == null ? null : operateUserAccount.trim();
     }
 }

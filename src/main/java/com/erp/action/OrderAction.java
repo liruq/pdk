@@ -1,10 +1,16 @@
 package com.erp.action;
 
 
+import com.erp.model.Order;
+import com.erp.service.OrderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  *
@@ -14,13 +20,18 @@ public class OrderAction {
 
     Logger logger = LoggerFactory.getLogger(OrderAction.class);
 
+    @Resource
+    OrderService orderService;
     /**
      * 订单登记
      */
     @RequestMapping("/order/add")
-    public String orderAdd(){
+    @ResponseBody
+    public String orderAdd(Order order, HttpServletRequest request){
         System.out.println("inOrder");
-        return "inOrder";
+        byte b=0;
+        order.setTpye(b);
+        return orderService.add(order,request);
     }
 
     /**
@@ -36,9 +47,11 @@ public class OrderAction {
      * 退货订单登记
      */
     @RequestMapping("/reOrder/add")
-    public String reOrderAdd(){
-        System.out.println("inOrder");
-        return "inOrder";
+    public String reOrderAdd(Order order, HttpServletRequest request){
+        byte b=1;
+        order.setTpye(b);
+        order.setCount(0-order.getCount());
+        return orderService.add(order,request);
     }
 
     /**
