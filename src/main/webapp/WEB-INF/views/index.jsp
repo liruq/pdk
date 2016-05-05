@@ -28,7 +28,7 @@
         <h4 class="M1"><span></span>销售订单管理</h4>
         <div class="list-item none">
           <a href='jst/order' target="rightFrame">订单登记</a>
-          <a href='jst/yl/ylStock' target="rightFrame">订单确认</a>
+          <a href='/confirmOrderPage' target="rightFrame">订单确认</a>
           <a href='jst/reorder' target="rightFrame">退货订单登记</a>
         </div>
       </li>

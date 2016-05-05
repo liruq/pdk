@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  *
@@ -32,6 +33,16 @@ public class OrderAction {
         byte b=0;
         order.setTpye(b);
         return orderService.add(order,request);
+    }
+
+
+    /**
+     * 订单确认
+     */
+    @RequestMapping("/confirmOrderPage")
+    public String confirmOrderPage(){
+        List<Order> orders=orderService.queryConfirm();
+        return "orderConfirm";
     }
 
     /**

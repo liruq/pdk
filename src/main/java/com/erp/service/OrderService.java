@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 
 @Service
@@ -27,5 +28,9 @@ public class OrderService {
         order.setOperateUserAccount((String) request.getSession().getAttribute("userId"));
         orderMapper.insertSelective(order);
     return "success";
+    }
+
+    public List<Order> queryConfirm(){
+        return orderMapper.queryConfirm();
     }
 }
