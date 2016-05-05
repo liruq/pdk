@@ -7,8 +7,6 @@ public class Product {
 
     private Integer count;
 
-    private Integer price;
-
     private Integer inCount;
 
     private Integer outCount;
@@ -35,14 +33,6 @@ public class Product {
 
     public void setCount(Integer count) {
         this.count = count;
-    }
-
-    public Integer getPrice() {
-        return price;
-    }
-
-    public void setPrice(Integer price) {
-        this.price = price;
     }
 
     public Integer getInCount() {

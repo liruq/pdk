@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 
 
 @Service
-public class UserService {
+public class OrderService {
     @Resource
     UserMapper userMapper;
 

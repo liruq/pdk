@@ -41,14 +41,14 @@ body {
 
 .btn-login {
 	color: #fff;
-	background-color: #EE5A38;
-	border-color: #C25437;
+	background-color: #00a5a5;
+	border-color: #00a5a5;
 }
 
 .btn-login:hover, .btn-login:active{
 	color: #fff;
-	background-color: #FF4E2A;
-	border-color: #C25437;
+	background-color: #00a5a5;
+	border-color: #00a5a5;
 }
 
 .close {
@@ -80,5 +80,5 @@ body {
 	margin-bottom: 10px;
 	padding-bottom: 10px;
 	text-align: center;
-	color: #EE5A38;
+	color: #00a5a5;
 }

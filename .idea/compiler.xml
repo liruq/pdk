@@ -24,8 +24,16 @@
         <processorPath useClasspath="true" />
         <module name="lanyuan-notebook-3.1v" />
       </profile>
+      <profile default="false" name="Annotation profile for erp" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="erp" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="erp" target="1.7" />
       <module name="lanyuan-notebook-3.1v" target="1.7" />
     </bytecodeTargetLevel>
   </component>

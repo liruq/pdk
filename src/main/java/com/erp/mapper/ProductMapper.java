@@ -1,9 +1,7 @@
 package com.erp.mapper;
 
 import com.erp.model.Product;
-import org.springframework.stereotype.Repository;
 
-@Repository
 public interface ProductMapper {
     int deleteByPrimaryKey(Integer id);
 

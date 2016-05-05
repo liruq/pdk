@@ -9,6 +9,8 @@ public class Inorder {
 
     private String inprice;
 
+    private Integer count;
+
     private Integer settlement;
 
     private Integer payable;
@@ -22,6 +24,10 @@ public class Inorder {
     private Integer operateUserId;
 
     private String createTime;
+
+    private String productName;
+
+    private String operateUserAccount;
 
     public Integer getId() {
         return id;
@@ -53,6 +59,14 @@ public class Inorder {
 
     public void setInprice(String inprice) {
         this.inprice = inprice == null ? null : inprice.trim();
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
     }
 
     public Integer getSettlement() {
@@ -109,5 +123,21 @@ public class Inorder {
 
     public void setCreateTime(String createTime) {
         this.createTime = createTime == null ? null : createTime.trim();
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public String getOperateUserAccount() {
+        return operateUserAccount;
+    }
+
+    public void setOperateUserAccount(String operateUserAccount) {
+        this.operateUserAccount = operateUserAccount;
     }
 }

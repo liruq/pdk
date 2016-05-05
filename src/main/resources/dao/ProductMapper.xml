@@ -5,12 +5,11 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="count" property="count" jdbcType="INTEGER" />
-    <result column="price" property="price" jdbcType="INTEGER" />
     <result column="inCount" property="inCount" jdbcType="INTEGER" />
     <result column="outCount" property="outCount" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, name, count, price, inCount, outCount
+    id, name, count, inCount, outCount
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -24,11 +23,9 @@
   </delete>
   <insert id="insert" parameterType="com.erp.model.Product" >
     insert into product (id, name, count, 
-      price, inCount, outCount
-      )
+      inCount, outCount)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER}, 
-      #{price,jdbcType=INTEGER}, #{inCount,jdbcType=INTEGER}, #{outCount,jdbcType=INTEGER}
-      )
+      #{inCount,jdbcType=INTEGER}, #{outCount,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.erp.model.Product" >
     insert into product
@@ -41,9 +38,6 @@
       </if>
       <if test="count != null" >
         count,
-      </if>
-      <if test="price != null" >
-        price,
       </if>
       <if test="inCount != null" >
         inCount,
@@ -62,9 +56,6 @@
       <if test="count != null" >
         #{count,jdbcType=INTEGER},
       </if>
-      <if test="price != null" >
-        #{price,jdbcType=INTEGER},
-      </if>
       <if test="inCount != null" >
         #{inCount,jdbcType=INTEGER},
       </if>
@@ -82,9 +73,6 @@
       <if test="count != null" >
         count = #{count,jdbcType=INTEGER},
       </if>
-      <if test="price != null" >
-        price = #{price,jdbcType=INTEGER},
-      </if>
       <if test="inCount != null" >
         inCount = #{inCount,jdbcType=INTEGER},
       </if>
@@ -98,7 +86,6 @@
     update product
     set name = #{name,jdbcType=VARCHAR},
       count = #{count,jdbcType=INTEGER},
-      price = #{price,jdbcType=INTEGER},
       inCount = #{inCount,jdbcType=INTEGER},
       outCount = #{outCount,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
