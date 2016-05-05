@@ -2,6 +2,7 @@ package com.erp.action;
 
 
 import com.erp.model.Inorder;
+import com.erp.model.Order;
 import com.erp.model.Product;
 import com.erp.service.ProductService;
 import org.slf4j.Logger;
@@ -53,9 +54,13 @@ public class ProductAction {
      *
      */
     @RequestMapping("/inOrder/list")
-    public String inOrderList(){
-        System.out.println("inOrder");
-        return "inOrder";
+    public String inOrderList(HttpServletRequest request){
+        List<Inorder> inorders=productService.inOrderList();
+        for(Inorder inorder:inorders){
+            inorder.setProductName(productService.queryProduct(inorder.getProductId()).getName());
+        }
+        request.setAttribute("list",inorders);
+        return "inproduct";
     }
 
 }

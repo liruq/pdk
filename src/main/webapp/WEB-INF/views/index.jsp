@@ -37,7 +37,7 @@
         <h4 class="M1"><span></span>查询统计</h4>
         <div class="list-item none">
           <a href='/stock' target="rightFrame">商品库存查询</a>
-          <a href='jst/yl/ylStock' target="rightFrame">商品进货查询</a>
+          <a href='/inOrder/list' target="rightFrame">商品进货查询</a>
           <a href='/orderlist' target="rightFrame">销售订单查询</a>
           <a href='/reorderlist' target="rightFrame">退货订单查询</a>
         </div>

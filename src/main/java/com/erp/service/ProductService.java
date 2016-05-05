@@ -43,15 +43,9 @@ public class ProductService {
     }
 
 
-    public String stock(){
-        System.out.println("inOrder");
-        return "inOrder";
-    }
+    public List<Inorder> inOrderList(){
 
-
-    public String inOrderList(){
-        System.out.println("inOrder");
-        return "inOrder";
+        return inorderMapper.list();
     }
 
     public Integer getProductId(String productName){
