@@ -6,11 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>cbstool</title>
     <link type="text/css" rel="stylesheet" href="../../static/global/css/style.css"/>
-    <script type="text/javascript" src="../../static/global/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/global/scripts/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="../../static/global/scripts/menu.js"></script>
-    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../../static/global/scripts/bootstrap.min.js"></script>
+    <link type="text/javascript" src="" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="/static/global/css/hg.css"/>
+    <link type="text/css" rel="stylesheet" href="../../static/global/css/bootstrap.min.css"/>
 
     <script type="text/javascript" src="/static/global/scripts/jquery.form.js"></script>
     <script type="text/javascript" src="/static/global/scripts/jsonUtils.js"></script>
@@ -89,21 +90,22 @@
                                            name="brokerage">
                                 </div>
                             </div>
-                            <div class="inputGroup inputGroupDiv">
-                                <span class="inputGroupSpan">操作人</span>
-                                <div class="oneLineDiv inputGroup inputGroupBackColor">
-                                    <input type="text" class="inputGroupInput" value=""
-                                           name="operateUserAccount">
-                                </div>
-                            </div>
+                            <%--<div class="inputGroup inputGroupDiv">--%>
+                                <%--<span class="inputGroupSpan">操作人</span>--%>
+                                <%--<div class="oneLineDiv inputGroup inputGroupBackColor">--%>
+                                    <%--<input type="text" class="inputGroupInput" value=""--%>
+                                           <%--name="operateUserAccount">--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
                             <div class="inputGroup inputGroupDiv">
                                 <span class="inputGroupSpan">进货日期</span>
                                 <div class="oneLineDiv inputGroup inputGroupBackColor">
                                     <input type="text" class="inputGroupInput" value=""
                                            name="createTime">
                                 </div>
-                            </div><br>
+                            </div>
                         </form>
+                        <br>
                         <button type="submit" class="btn btn-success" style=" margin-left: 10px;margin-top:10px;" onclick="submitOrder();">提交</button>
                     </div>
                 </div>
@@ -115,11 +117,10 @@
 </div>
 <script>
     function submitOrder() {
-        alert("aa");
+        var form = $("#submitOrder");
         var options = {
             url: "/inOrder/add",
             type: 'post',
-            data:$('#submitOrder').serialize(),
             success: function (data) {
                 alert("登记成功！")
             }

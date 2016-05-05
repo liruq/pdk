@@ -50,7 +50,7 @@
   </div>
 </div>
 <div class="bottom"></div>
-<div id="footer"><p>©2015 Bumps to Babes 版权所有</p></div>
+<div id="footer"><p>毕业设计 版权所有</p></div>
 <script>navList(12);</script>
 </body>
 </html>
