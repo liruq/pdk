@@ -21,13 +21,19 @@ public class Inorder {
 
     private String brokerage;
 
-    private Integer operateUserId;
+    private String operateUserAccount;
 
     private String createTime;
 
     private String productName;
 
-    private String operateUserAccount;
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
 
     public Integer getId() {
         return id;
@@ -109,12 +115,12 @@ public class Inorder {
         this.brokerage = brokerage == null ? null : brokerage.trim();
     }
 
-    public Integer getOperateUserId() {
-        return operateUserId;
+    public String getOperateUserAccount() {
+        return operateUserAccount;
     }
 
-    public void setOperateUserId(Integer operateUserId) {
-        this.operateUserId = operateUserId;
+    public void setOperateUserAccount(String operateUserAccount) {
+        this.operateUserAccount = operateUserAccount == null ? null : operateUserAccount.trim();
     }
 
     public String getCreateTime() {
@@ -123,21 +129,5 @@ public class Inorder {
 
     public void setCreateTime(String createTime) {
         this.createTime = createTime == null ? null : createTime.trim();
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public String getOperateUserAccount() {
-        return operateUserAccount;
-    }
-
-    public void setOperateUserAccount(String operateUserAccount) {
-        this.operateUserAccount = operateUserAccount;
     }
 }

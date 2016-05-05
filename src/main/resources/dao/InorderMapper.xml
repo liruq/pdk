@@ -12,12 +12,12 @@
     <result column="paid" property="paid" jdbcType="INTEGER" />
     <result column="unpay" property="unpay" jdbcType="INTEGER" />
     <result column="brokerage" property="brokerage" jdbcType="VARCHAR" />
-    <result column="operateUserId" property="operateUserId" jdbcType="INTEGER" />
+    <result column="operateUserAccount" property="operateUserAccount" jdbcType="VARCHAR" />
     <result column="createTime" property="createTime" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, productId, vendor, inprice, count, settlement, payable, paid, unpay, brokerage, 
-    operateUserId, createTime
+    operateUserAccount, createTime
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -33,12 +33,12 @@
     insert into inorder (id, productId, vendor, 
       inprice, count, settlement, 
       payable, paid, unpay, 
-      brokerage, operateUserId, createTime
+      brokerage, operateUserAccount, createTime
       )
     values (#{id,jdbcType=INTEGER}, #{productId,jdbcType=INTEGER}, #{vendor,jdbcType=VARCHAR}, 
       #{inprice,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER}, #{settlement,jdbcType=INTEGER}, 
       #{payable,jdbcType=INTEGER}, #{paid,jdbcType=INTEGER}, #{unpay,jdbcType=INTEGER}, 
-      #{brokerage,jdbcType=VARCHAR}, #{operateUserId,jdbcType=INTEGER}, #{createTime,jdbcType=VARCHAR}
+      #{brokerage,jdbcType=VARCHAR}, #{operateUserAccount,jdbcType=VARCHAR}, #{createTime,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.erp.model.Inorder" >
@@ -74,8 +74,8 @@
       <if test="brokerage != null" >
         brokerage,
       </if>
-      <if test="operateUserId != null" >
-        operateUserId,
+      <if test="operateUserAccount != null" >
+        operateUserAccount,
       </if>
       <if test="createTime != null" >
         createTime,
@@ -112,8 +112,8 @@
       <if test="brokerage != null" >
         #{brokerage,jdbcType=VARCHAR},
       </if>
-      <if test="operateUserId != null" >
-        #{operateUserId,jdbcType=INTEGER},
+      <if test="operateUserAccount != null" >
+        #{operateUserAccount,jdbcType=VARCHAR},
       </if>
       <if test="createTime != null" >
         #{createTime,jdbcType=VARCHAR},
@@ -150,8 +150,8 @@
       <if test="brokerage != null" >
         brokerage = #{brokerage,jdbcType=VARCHAR},
       </if>
-      <if test="operateUserId != null" >
-        operateUserId = #{operateUserId,jdbcType=INTEGER},
+      <if test="operateUserAccount != null" >
+        operateUserAccount = #{operateUserAccount,jdbcType=VARCHAR},
       </if>
       <if test="createTime != null" >
         createTime = #{createTime,jdbcType=VARCHAR},
@@ -170,7 +170,7 @@
       paid = #{paid,jdbcType=INTEGER},
       unpay = #{unpay,jdbcType=INTEGER},
       brokerage = #{brokerage,jdbcType=VARCHAR},
-      operateUserId = #{operateUserId,jdbcType=INTEGER},
+      operateUserAccount = #{operateUserAccount,jdbcType=VARCHAR},
       createTime = #{createTime,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>

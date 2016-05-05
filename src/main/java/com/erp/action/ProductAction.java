@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  *
@@ -28,9 +29,9 @@ public class ProductAction {
      */
     @RequestMapping("/inOrder/add")
     @ResponseBody
-    public String inOrderAdd(Inorder inorder){
+    public String inOrderAdd(Inorder inorder, HttpServletRequest request){
         System.out.println("inOrder");
-        productService.inOrderAdd(inorder);
+        productService.inOrderAdd(inorder,request);
         return "success";
     }
 

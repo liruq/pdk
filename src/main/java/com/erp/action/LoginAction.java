@@ -38,6 +38,7 @@ public class LoginAction {
             return "login";
         }
         session.setAttribute("login", true);
+        session.setAttribute("userId", username);
         return "redirect:/";
     }
 

@@ -27,7 +27,7 @@
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER}, 
       #{inCount,jdbcType=INTEGER}, #{outCount,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.erp.model.Product" >
+  <insert id="insertSelective" parameterType="com.erp.model.Product" useGeneratedKeys="true" keyProperty="id">
     insert into product
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
