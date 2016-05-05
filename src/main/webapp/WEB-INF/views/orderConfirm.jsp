@@ -19,61 +19,55 @@
 
 <body>
 订单确认
-<div class="container-fluid"
-     style="height:100%;  width:90%;float: left;margin-left: 30px; margin-top: 20px; overflow: scroll">
-    <div class="row-fluid">
-        <div class="span12">
-            <div class="tabbable" id="tabs-669559">
-                <div class="tab-content">
-                    <div class="tab-pane  active" id="panel-1">
-                        <form method="post"  id="submitOrder">
-                            <br>
-                            <div class="inputGroup inputGroupDiv inputGroupDivFirst">
-                                <span class="inputGroupSpan">商品名称</span>
-                                <div class="oneLineDiv inputGroup inputGroupBackColor">
-                                    <input type="text" class="inputGroupInput" value=""
-                                           name="productName">
-                                </div>
-                            </div>
-                            <div class="inputGroup inputGroupDiv">
-                                <span class="inputGroupSpan">销售数量</span>
-                                <div class="oneLineDiv inputGroup inputGroupBackColor">
-                                    <input type="text" class="inputGroupInput" value=""
-                                           name="count">
-                                </div>
-                            </div>
-                            <div class="inputGroup inputGroupDiv">
-                                <span class="inputGroupSpan">销售价格</span>
-                                <div class="oneLineDiv inputGroup inputGroupBackColor">
-                                    <input type="text" class="inputGroupInput" value=""
-                                           name="price">
-                                </div>
-                            </div>
-                            <div class="inputGroup inputGroupDiv">
-                                <span class="inputGroupSpan">客户ID</span>
-                                <div class="oneLineDiv inputGroup inputGroupBackColor">
-                                    <input type="text" class="inputGroupInput" value=""
-                                           name="comsumerId">
-                                </div>
-                            </div>
-                            <div class="inputGroup inputGroupDiv">
-                                <span class="inputGroupSpan">经手人</span>
-                                <div class="oneLineDiv inputGroup inputGroupBackColor">
-                                    <input type="text" class="inputGroupInput" value=""
-                                           name="brokerage">
-                                </div>
-                            </div>
-                        </form>
-                        <br>
-                        <button type="submit" class="btn btn-success" style=" margin-left: 10px;margin-top:10px;" onclick="submitOrder();">提交</button>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+<table class="commonTable" id="orderDetailTable">
+    <thead>
+    <th>商品名字</th>
+    <th>数量</th>
+    <th>消费者id</th>
+    <%--<th>消费者姓名</th>--%>
+    <th>销售价</th>
+    <th>经手人</th>
+    <th>快递公司</th>
+    <th>快递单号</th>
+    </thead>
+    <tbody>
+    <c:forEach var="order" items="${list}" varStatus="status">
+    <tr>
+        <td>
+                ${order.productName}
+        </td>
+        <td>
+                ${order.count}
+        </td>
+        <td>
+                ${order.comsumerId}
+        </td>
+        <%--<td>--%>
+                <%--${order.}--%>
+        <%--</td>--%>
+        <td>
+                ${order.price}
+        </td>
+        <td>
+                ${order.brokerage}
+        </td>
+
+        <td>
+            <input type="text" class="tableInput" value="" placeholder="请输入.."
+                   name="expressCom">
+        </td>
+        <td>
+            <input type="text" class="tableInput" value="" placeholder="请输入.."
+                   name="expressNum">
+        </td>
+        <td>
+            <button class="btn btn-success"  onclick="">提交快递信息</button>
+        </td>
+    </tr>
+    </c:forEach>
+    </tbody>
+</table>
 <script>
     function submitOrder() {
         alert("aa");

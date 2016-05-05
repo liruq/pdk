@@ -3,6 +3,7 @@ package com.erp.action;
 
 import com.erp.model.Order;
 import com.erp.service.OrderService;
+import com.erp.service.ProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,8 @@ public class OrderAction {
 
     @Resource
     OrderService orderService;
+    @Resource
+    ProductService productService;
     /**
      * 订单登记
      */
@@ -40,8 +43,12 @@ public class OrderAction {
      * 订单确认
      */
     @RequestMapping("/confirmOrderPage")
-    public String confirmOrderPage(){
+    public String confirmOrderPage(HttpServletRequest request){
         List<Order> orders=orderService.queryConfirm();
+        for(Order order:orders){
+            order.setProductName(productService.queryProduct(order.getProductId()).getName());
+        }
+        request.setAttribute("list",orders);
         return "orderConfirm";
     }
 

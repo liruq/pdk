@@ -56,4 +56,8 @@ public class ProductService {
     public Integer getProductId(String productName){
         return productMapper.getProductId(productName);
     }
+
+    public Product queryProduct(int id){
+        return productMapper.selectByPrimaryKey(id);
+    }
 }
