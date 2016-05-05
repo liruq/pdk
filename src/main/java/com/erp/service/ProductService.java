@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 
 @Service
@@ -59,5 +60,9 @@ public class ProductService {
 
     public Product queryProduct(int id){
         return productMapper.selectByPrimaryKey(id);
+    }
+
+    public List<Product> queryAll() {
+        return productMapper.queryAll();
     }
 }

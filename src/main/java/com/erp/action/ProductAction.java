@@ -2,6 +2,7 @@ package com.erp.action;
 
 
 import com.erp.model.Inorder;
+import com.erp.model.Product;
 import com.erp.service.ProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  *
@@ -40,9 +42,10 @@ public class ProductAction {
      *
      */
     @RequestMapping("/stock")
-    public String stock(){
-        System.out.println("inOrder");
-        return "inOrder";
+    public String stock(HttpServletRequest request){
+        List<Product> products=productService.queryAll();
+        request.setAttribute("list",products);
+        return "stock";
     }
 
     /**

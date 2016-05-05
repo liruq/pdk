@@ -6,6 +6,8 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectKey;
 import org.apache.ibatis.annotations.Update;
 
+import java.util.List;
+
 public interface ProductMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -25,4 +27,7 @@ public interface ProductMapper {
     @Update("update product set count = count+#{count} where id=#{id}")
     @SelectKey(statement="select count from product where id=#{id}", keyProperty="id", before=false, resultType=int.class)
     int changeCount(@Param("count") int count,@Param("id")int id);
+
+    @Select("select * from product")
+    List<Product> queryAll();
 }

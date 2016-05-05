@@ -25,4 +25,7 @@ public interface OrderMapper {
 
     @Update("UPDATE `order` SET `expressCom`=#{expressCom}, `expressNum`=#{expressNum} WHERE  `id`=#{id}")
     void confirmOrder(@Param("expressCom")String expressCom,@Param("expressNum") String expressNum, @Param("id") int id);
+
+    @Select("select * from `order` where `tpye`=1")
+    List<Order> queryReOrder();
 }

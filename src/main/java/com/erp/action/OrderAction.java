@@ -76,18 +76,26 @@ public class OrderAction {
     /**
      * 销售订单查询
      */
-    @RequestMapping("/order/list")
-    public String orderList(){
-        System.out.println("inOrder");
-        return "inOrder";
+    @RequestMapping("/orderlist")
+    public String orderList(HttpServletRequest request){
+        List<Order> orders=orderService.queryConfirm();
+        for(Order order:orders){
+            order.setProductName(productService.queryProduct(order.getProductId()).getName());
+        }
+        request.setAttribute("list",orders);
+        return "orderlist";
     }
 
     /**
      * 退货订单查询
      */
-    @RequestMapping("/reOrder/list")
-    public String reOrderList(){
-        System.out.println("inOrder");
-        return "inOrder";
+    @RequestMapping("/reorderlist")
+    public String reOrderList(HttpServletRequest request){
+        List<Order> orders=orderService.queryConfirm();
+        for(Order order:orders){
+            order.setProductName(productService.queryProduct(order.getProductId()).getName());
+        }
+        request.setAttribute("list",orders);
+        return "reorderlist";
     }
 }
