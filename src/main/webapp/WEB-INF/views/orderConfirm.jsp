@@ -33,6 +33,7 @@
     </thead>
     <tbody>
     <c:forEach var="order" items="${list}" varStatus="status">
+        <input type="text" id="id${ status.index}" style="display: none" value="${order.id}">
     <tr>
         <td>
                 ${order.productName}
@@ -54,34 +55,31 @@
         </td>
 
         <td>
-            <input type="text" class="tableInput" value="" placeholder="请输入.."
+            <input type="text" class="tableInput" value="" placeholder="请输入.." id="expressCom${ status.index}"
                    name="expressCom">
         </td>
         <td>
-            <input type="text" class="tableInput" value="" placeholder="请输入.."
+            <input type="text" class="tableInput" value="" placeholder="请输入.." id="expressNum${ status.index}"
                    name="expressNum">
         </td>
         <td>
-            <button class="btn btn-success"  onclick="">提交快递信息</button>
+            <button class="btn btn-success"  onclick="submitOrder(${ status.index});">提交快递信息</button>
         </td>
     </tr>
     </c:forEach>
     </tbody>
 </table>
 <script>
-    function submitOrder() {
-        alert("aa");
-        var form = $("#submitOrder");
-        var options = {
-            url: "/order/add",
-            type: 'post',
-            success: function (data) {
-                if(data=='fail') {
-                    alert('还不存在该商品，请先进货');
-                }else{alert("登记成功");}
-            }
-        }
-        form.ajaxSubmit(options);
+    function submitOrder(index) {
+        $.post("/confirmOrder",
+                {
+                    expressCom: $("#expressCom"+index).val(),
+                    expressNum: $("#expressNum"+index).val(),
+                    id:$("#id"+index).val()
+                },
+                function(data,status){
+                    alert("提交成功");
+                });
     }
 </script>
 </body>

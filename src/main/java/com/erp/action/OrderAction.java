@@ -56,9 +56,10 @@ public class OrderAction {
      * 订单确认
      */
     @RequestMapping("/confirmOrder")
-    public String confirmOrder(){
-        System.out.println("inOrder");
-        return "inOrder";
+    @ResponseBody
+    public String confirmOrder(String expressCom,String expressNum,int id){
+        orderService.confirmOrder(expressCom,expressNum,id);
+        return "success";
     }
 
     /**

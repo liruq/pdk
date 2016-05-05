@@ -33,4 +33,8 @@ public class OrderService {
     public List<Order> queryConfirm(){
         return orderMapper.queryConfirm();
     }
+
+    public void confirmOrder(String expressCom, String expressNum, int id) {
+        orderMapper.confirmOrder(expressCom,expressNum,id);
+    }
 }
