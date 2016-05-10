@@ -106,7 +106,12 @@ public class SmEmployeeDetailAction {
             if ( StringUtils.isEmpty(employee.getHeaderImg()) ) {
                 employee.setHeaderImg(null);
             }
-
+            if(employee.getRoleId()==null){
+                employee.setRoleId("0001SM201510211758150000");
+            }
+            if(employee.getPositionId()==null){
+                employee.setPositionId("PDKPREDATA0000000002");
+            }
             if (StringUtils.isEmpty(employee.getId())) {
                 employee.setPassword(DigestUtils.md5Hex(employee.getPassword()));
                 employeeService.save(employee);
